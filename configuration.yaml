@@ -8,6 +8,11 @@ homeassistant:
   customize: !include customize.yaml
 # Show links to resources in log and frontend
 
+# Weather
+weather:
+  - platform: darksky
+    api_key: !secret weather_api_key
+
 # Zone
 zone:
   - name: Home
@@ -36,7 +41,7 @@ http:
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
+# updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
@@ -52,7 +57,7 @@ discovery:
     - plex_mediaserver
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+# conversation:
 
 # Enables support for tracking state changes over time
 history:
@@ -62,9 +67,6 @@ logbook:
 
 # Enables a map showing the location of tracked devices
 map:
-
-# Cloud
-#cloud:
 
 # lovelace
 lovelace:
@@ -79,26 +81,12 @@ sensor: !include sensors.yaml
 light: !include lights.yaml
 switch: !include switches.yaml
 homekit: !include homekit.yaml
+yeelight: !include yeelight.yaml
 
 xiaomi_aqara:
   discovery_retry: 5
   gateways:
     - key: !secret aqara_key
-
-weather:
-  - platform: darksky
-    api_key: !secret weather_api_key
-
-yeelight:
-  devices:
-    192.168.1.180:
-      name: Toilet Light
-    192.168.1.117:
-      name: Night Light
-    192.168.1.166:
-      name: Light Strip
-
-mobile_app:
 
 pi_hole:
   host: pi.hole
