@@ -7,5 +7,5 @@
   host: 192.168.1.14
   token: !secret dl_token
 - platform: switch
-  name: 大灯
+  name: Ceiling Light
   entity_id: switch.shelly

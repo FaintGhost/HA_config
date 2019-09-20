@@ -45,13 +45,15 @@ views:
           - entity: light.toilet_light
             tap_action:
               action: toggle
-          - entity: light.da_deng
+          - entity: light.ceiling_light
             tap_action:
               action: toggle
           - entity: light.night_light
             tap_action:
               action: toggle
           - entity: light.gateway_light_286c07892155
+            tap_action:
+              action: toggle
           - entity: light.kitchen_light
             tap_action:
               action: toggle

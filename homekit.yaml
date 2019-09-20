@@ -7,7 +7,6 @@ filter:
     - binary_sensor.cube_158d0002564da3
     - binary_sensor.switch_158d0001563f1a
     - binary_sensor.remote_ui
-    - binary_sensor.updater
     - switch.shelly
     - sensor.cpu_temperature
   exclude_domains:

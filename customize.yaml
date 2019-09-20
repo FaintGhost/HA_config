@@ -11,6 +11,8 @@ light.gateway_light_286c07892155:
   friendly_name: 网关灯
 light.kitchen_light:
   friendly_name: 厨房灯
+light.ceiling_light:
+  friendly_name: 顶灯
 # Switches
 switch.plug_158d000154b2cb:
   friendly_name: 厨房开关
@@ -25,6 +27,8 @@ switch.plug_158d0001e8975b:
 switch.srsx99:
   icon: mdi:cast
   friendly_name: 音箱
+switch.shelly:
+  friendly_name: 墙壁开关
 # Sensors  
 binary_sensor.door_window_sensor_158d0001583bba:
   friendly_name: 厨房门
