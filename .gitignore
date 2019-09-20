@@ -9,3 +9,4 @@
 .homekit.state
 .uuid
 .storage
+node-red/.flows.json.backup
