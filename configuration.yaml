@@ -13,39 +13,22 @@ weather:
   - platform: darksky
     api_key: !secret weather_api_key
 
-# Zone
-zone:
-  - name: Home
-    latitude: 51.337396
-    longitude: 12.377815
-    radius: 20
-    icon: mdi:home
-
-hassio:
-
 # Enables the frontend
 frontend:
   themes: !include themes.yaml
+
+# lovelace
+lovelace:
+  mode: yaml
+
+# hassio
+hassio:
 
 # Enables configuration UI
 config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-
-# Discover some devices automatically
-discovery:
-  ignore:
-    - apple_tv
-    - google_cast
-    - yeelight
-    - songpal
-    - xiaomi_gw
-    - igd
-    - plex_mediaserver
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-# conversation:
 
 # Enables support for tracking state changes over time
 history:
@@ -56,12 +39,9 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-# lovelace
-lovelace:
-  mode: yaml
-
 system_health:
 
+zone: !include zone.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -71,14 +51,11 @@ switch: !include switches.yaml
 homekit: !include homekit.yaml
 yeelight: !include yeelight.yaml
 xiaomi_aqara: !include xiaomi_aqara.yaml
+discovery: !include discovery.yaml
+media_player: !include media_player.yaml
 
 pi_hole:
   host: pi.hole
-
-media_player:
-  - platform: songpal
-    name: SRS-X99
-    endpoint: http://192.168.1.250:54480/sony
 
 speedtestdotnet:
   scan_interval:
