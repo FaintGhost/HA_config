@@ -1,0 +1,11 @@
+- platform: xiaomi_miio
+  name: Kitchen Light
+  host: 192.168.1.142
+  token: !secret kl_token
+- platform: xiaomi_miio
+  name: Doorway Light
+  host: 192.168.1.14
+  token: !secret dl_token
+- platform: switch
+  name: 大灯
+  entity_id: switch.shelly

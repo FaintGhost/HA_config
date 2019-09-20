@@ -1,0 +1,68 @@
+#Lights
+light.toilet_light:
+  friendly_name: 厕所灯
+light.night_light:
+  friendly_name: 床头灯
+light.light_strip:
+  friendly_name: 灯带
+light.doorway_light:
+  friendly_name: 走廊灯
+light.gateway_light_286c07892155:
+  friendly_name: 网关灯
+light.kitchen_light:
+  friendly_name: 厨房灯
+#Switches
+switch.plug_158d000154b2cb:
+  friendly_name: 厨房开关
+switch.plug_158d0001e89755:
+  friendly_name: 地下开关
+switch.plug_158d000236c60a:
+  friendly_name: 桌下开关后
+switch.plug_158d00012db5eb:
+  friendly_name: 桌下开关前
+switch.plug_158d0001e8975b:
+  friendly_name: 床头开关
+switch.srsx99:
+  icon: mdi:cast
+  friendly_name: 音箱
+#Sensors  
+binary_sensor.door_window_sensor_158d0001583bba:
+  friendly_name: 厨房门
+  icon: mdi:door
+binary_sensor.door_window_sensor_158d0001b862e7:
+  friendly_name: 卧室门
+  icon: mdi:door
+binary_sensor.door_window_sensor_158d0001bf47c1:
+  friendly_name: 大门
+  icon: mdi:door
+binary_sensor.motion_sensor_158d00010f84dd:
+  friendly_name: 走廊动作
+binary_sensor.motion_sensor_158d0001ad49f0:
+  friendly_name: 厨房动作
+binary_sensor.motion_sensor_158d000257f9fb:
+  friendly_name: 卫生间动作
+binary_sensor.motion_sensor_158d0002f98ea9:
+  friendly_name: 卧室动作
+sensor.illumination_158d0001ad49f0:
+  friendly_name: 厨房亮度
+sensor.illumination_158d000257f9fb:
+  friendly_name: 卫生间亮度
+sensor.illumination_286c07892155:
+  friendly_name: 卧室亮度
+sensor.temperature_158d000149c947:
+  friendly_name: 温度
+sensor.humidity_158d000149c947:
+  friendly_name: 湿度
+binary_sensor.cube_158d0002564da3:
+  friendly_name: 魔方控制器
+binary_sensor.switch_158d0001563f1a:
+  friendly_name: 无线开关 
+#Groups
+group.all_automations:
+  friendly_name: 所有自动化
+group.all_lights:
+  friendly_name: 所有灯
+group.all_switches:
+  friendly_name: 所有开关
+group.all_devices:
+  friendly_name: 所有设备

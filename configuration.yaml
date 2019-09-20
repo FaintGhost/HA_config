@@ -1,0 +1,117 @@
+homeassistant:
+  name: 智能家居管理系统
+  latitude: 51.3
+  longitude: 12.3333
+  elevation: 111
+  unit_system: metric
+  time_zone: Europe/Berlin
+  customize: !include customize.yaml
+# Show links to resources in log and frontend
+
+# Zone
+zone:
+  - name: Home
+    latitude: 51.337396
+    longitude: 12.377815
+    radius: 20
+    icon: mdi:home
+
+hassio:
+
+# Enables the frontend
+frontend:
+  themes: !include themes.yaml
+
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+#  base_url: https://faintghost.duckdns.org:8123
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - apple_tv
+    - google_cast
+    - yeelight
+    - songpal
+    - xiaomi_gw
+    - igd
+    - plex_mediaserver
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Cloud
+#cloud:
+
+# lovelace
+lovelace:
+  mode: yaml
+
+system_health:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+light: !include lights.yaml
+switch: !include switches.yaml
+homekit: !include homekit.yaml
+
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: !secret aqara_key
+
+weather:
+  - platform: darksky
+    api_key: !secret weather_api_key
+
+yeelight:
+  devices:
+    192.168.1.180:
+      name: Toilet Light
+    192.168.1.117:
+      name: Night Light
+    192.168.1.166:
+      name: Light Strip
+
+mobile_app:
+
+pi_hole:
+  host: pi.hole
+
+media_player:
+  - platform: songpal
+    name: SRS-X99
+    endpoint: http://192.168.1.250:54480/sony
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload

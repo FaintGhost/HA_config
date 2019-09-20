@@ -1,0 +1,20 @@
+- platform: mqtt
+  name: shelly
+  state_topic: "shellies/shelly1-32CC21/relay/0"
+  command_topic: "shellies/shelly1-32CC21/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+
+- platform: template
+  switches:
+    srsx99:
+      value_template: "{{ is_state('media_player.srs_x99', 'on') }}"
+      turn_on:
+        service: media_player.turn_on
+        data:
+          entity_id: media_player.srs_x99
+      turn_off:
+        service: media_player.turn_off
+        data:
+          entity_id: media_player.srs_x99
