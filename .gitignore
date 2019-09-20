@@ -1,0 +1,11 @@
+/deps/*
+/tts/*
+/.cloud/*
+
+#database
+*.db
+*.log
+.HA_VERSION
+.homekit.state
+.uuid
+.storage
