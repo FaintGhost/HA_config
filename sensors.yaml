@@ -2,5 +2,5 @@
   name: CPU Temperature
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   # If errors occur, remove degree symbol below
-  unit_of_measurement: "°C"
+  unit_of_measurement: "C"
   value_template: '{{ value | multiply(0.001) | round(1) }}'
