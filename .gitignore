@@ -11,8 +11,8 @@
 .storage
 
 # nodered
-/node-red/*
-!/node-red/flows.json
+*.json
+!flows.json
 /.vscode
 /integrations/.vscode/*
 
