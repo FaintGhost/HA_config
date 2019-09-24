@@ -12,6 +12,7 @@
 
 # nodered
 *.json
+*.backup
 !flows.json
 /.vscode
 /integrations/.vscode/*
