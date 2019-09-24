@@ -11,9 +11,10 @@
 .storage
 
 # nodered
-/node-red
-!/node-red/flows.json
+/node-red/*
+/node-red/!flows.json
 /.vscode
+/integrations/.vscode/*
 
 # secrets
 secrets.yaml
