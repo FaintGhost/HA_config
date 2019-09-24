@@ -12,7 +12,7 @@
 
 # nodered
 /node-red/*
-/node-red/!flows.json
+!/node-red/flows.json
 /.vscode
 /integrations/.vscode/*
 
