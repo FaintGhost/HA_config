@@ -1,0 +1,5 @@
+light:
+  - platform: xiaomi_miio
+    name: Doorway Light
+    host: 192.168.1.14
+    token: !secret dl_token

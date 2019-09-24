@@ -1,0 +1,18 @@
+sensor.illumination_158d0001ad49f0:
+  friendly_name: 厨房亮度
+sensor.illumination_158d000257f9fb:
+  friendly_name: 卫生间亮度
+sensor.illumination_286c07892155:
+  friendly_name: 卧室亮度
+sensor.temperature_158d000149c947:
+  friendly_name: 温度
+sensor.humidity_158d000149c947:
+  friendly_name: 湿度
+sensor.speedtest_download:
+  friendly_name: 下行
+sensor.speedtest_upload:
+  friendly_name: 上行
+sensor.pi_hole_ads_blocked_today:
+  friendly_name: 广告
+sensor.cpu_temperature:
+  friendly_name: CPU温度

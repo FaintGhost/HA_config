@@ -1,0 +1,14 @@
+homekit:
+  filter:
+    exclude_entities:
+      - switch.xiaomi_miio_switch
+      - sensor.illumination_158d0001ad49f0
+      - sensor.illumination_158d000257f9fb
+      - sensor.illumination_286c07892155
+      - binary_sensor.cube_158d0002564da3
+      - binary_sensor.switch_158d0001563f1a
+      - binary_sensor.remote_ui
+      - switch.shelly
+      - sensor.cpu_temperature
+    exclude_domains:
+      - automation

@@ -1,0 +1,7 @@
+zone:
+  - name: Home
+    latitude: !secret ha_latitude
+    longitude: !secret ha_longitude
+    elevation: !secret ha_elevation
+    radius: 20
+    icon: mdi:home

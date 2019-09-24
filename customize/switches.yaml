@@ -1,0 +1,16 @@
+# switches
+switch.plug_158d000154b2cb:
+  friendly_name: 厨房开关
+switch.plug_158d0001e89755:
+  friendly_name: 地下开关
+switch.plug_158d000236c60a:
+  friendly_name: 桌下开关后
+switch.plug_158d00012db5eb:
+  friendly_name: 桌下开关前
+switch.plug_158d0001e8975b:
+  friendly_name: 床头开关
+switch.srsx99:
+  icon: mdi:cast
+  friendly_name: 音箱
+switch.shelly:
+  friendly_name: 墙壁开关

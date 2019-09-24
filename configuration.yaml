@@ -1,21 +1,21 @@
 homeassistant:
   name: 智能家居管理系统
-  latitude: 51.3
-  longitude: 12.3333
-  elevation: 111
+  latitude: !secret ha_latitude
+  longitude: !secret ha_longitude
+  elevation: !secret ha_elevation
   unit_system: metric
   time_zone: Europe/Berlin
-  customize: !include customize.yaml
+  customize: !include_dir_merge_named customize
+  packages: !include_dir_named integrations
 # Show links to resources in log and frontend
 
-# Weather
-weather:
-  - platform: darksky
-    api_key: !secret weather_api_key
+# automation
+automation: !include automations.yaml
 
 # Enables the frontend
 frontend:
-  themes: !include themes.yaml
+  javascript_version: latest
+  themes: !include_dir_merge_named themes
 
 # lovelace
 lovelace:
@@ -40,27 +40,3 @@ logbook:
 map:
 
 system_health:
-
-zone: !include zone.yaml
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-sensor: !include sensors.yaml
-light: !include lights.yaml
-switch: !include switches.yaml
-homekit: !include homekit.yaml
-yeelight: !include yeelight.yaml
-xiaomi_aqara: !include xiaomi_aqara.yaml
-discovery: !include discovery.yaml
-media_player: !include media_player.yaml
-
-pi_hole:
-  host: pi.hole
-
-speedtestdotnet:
-  scan_interval:
-    minutes: 30
-  monitored_conditions:
-    - ping
-    - download
-    - upload
