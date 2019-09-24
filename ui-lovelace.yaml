@@ -17,7 +17,6 @@ views:
                 graph: line
                 type: sensor
               - entity: sensor.pi_hole_ads_blocked_today
-                name: 广告拦截
                 graph: line
                 type: sensor
             type: horizontal-stack
@@ -25,15 +24,12 @@ views:
       - cards:
           - cards:
               - entity: sensor.speedtest_download
-                name: 上行
                 graph: line
                 type: sensor
               - entity: sensor.speedtest_upload
-                name: 下行
                 graph: line
                 type: sensor
               - entity: sensor.cpu_temperature
-                name: CPU温度
                 type: sensor
                 graph: line                
             type: horizontal-stack
