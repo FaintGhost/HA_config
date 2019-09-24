@@ -2,16 +2,26 @@
 /tts/*
 /.cloud/*
 
-#database
+# database
 *.db
 *.log
 .HA_VERSION
 .homekit.state
 .uuid
 .storage
-node-red/.flows.json.backup
+
+# nodered
+node-red/lib/*
 node-red/.config.json
 node-red/.config.json.backup
+node-red/.flows_cred.json.backup
 node-red/.flows.json.backup
+node-red/flows_cred.json
+node-red/node-red-contrib-home-assistant-websocket.json
+node-red/package-lock.json
+node-red/package.json
+node-red/settings.js
 .vscode/settings.json
+
+# secrets
 secrets.yaml
