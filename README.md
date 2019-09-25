@@ -33,7 +33,7 @@ config/
 │  │      pi_cpu_temp.yaml
 │  │
 │  ├─switch
-│  │      shelly.yaml
+│  │      shelly_switch.yaml
 │  │      template_switch.yaml
 │  │
 │  ├─xiaomi_aqara
