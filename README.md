@@ -1,4 +1,4 @@
-# HA_config
+# 个人hassio配置
 
 ```
 config/
@@ -13,7 +13,6 @@ config/
 │      sensors.yaml
 │      switches.yaml
 │
-├─deps
 ├─integrations
 │  │  discovery.yaml
 │  │  groups.yaml
