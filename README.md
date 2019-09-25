@@ -1,6 +1,7 @@
 # HA_config
 
 ```
+config/
 │  automations.yaml
 │  configuration.yaml
 │  ui-lovelace.yaml
