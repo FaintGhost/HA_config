@@ -1,9 +1,8 @@
 # HA_config
+
+```
 │  automations.yaml
 │  configuration.yaml
-│  home-assistant.log
-│  home-assistant_v2.db
-│  secrets.yaml
 │  ui-lovelace.yaml
 │
 ├─customize
@@ -46,16 +45,11 @@
 │          toilet_light.yaml
 │
 ├─node-red
-│  │  flows.json
-│  │  flows_cred.json
-│  │  node-red-contrib-home-assistant-websocket.json
-│  │  package-lock.json
-│  │  package.json
-│  │  settings.js
-│  │
-│  └─lib
-│      └─flows
+│     flows.json
+│     settings.js
+│
 └─themes
         dark_green.yaml
         light_blue.yaml
         palms.yaml
+```
