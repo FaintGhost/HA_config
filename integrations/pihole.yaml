@@ -1,2 +1,2 @@
 pi_hole:
-  host: pi.hole:8080
+  host: pi.hole:8088
