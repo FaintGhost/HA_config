@@ -16,7 +16,9 @@ config/
 ├─integrations
 │  │  discovery.yaml
 │  │  groups.yaml
+|  |  history.yaml
 │  │  homekit.yaml
+|  |  logbook.yaml
 │  │  media_player.yaml
 │  │  pihole.yaml
 │  │  scripts.yaml
