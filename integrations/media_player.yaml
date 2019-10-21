@@ -1,4 +1,0 @@
-media_player:
-  - platform: songpal
-    name: SRS-X99
-    endpoint: http://192.168.1.250:54480/sony
