@@ -12,7 +12,5 @@ sensor.speedtest_download:
   friendly_name: 下行
 sensor.speedtest_upload:
   friendly_name: 上行
-sensor.adguard_dns_queries_blocked:
-  friendly_name: 广告
 sensor.cpu_temperature:
   friendly_name: CPU温度

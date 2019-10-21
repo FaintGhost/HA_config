@@ -7,30 +7,18 @@ homeassistant:
   time_zone: Europe/Berlin
   customize: !include_dir_merge_named customize
   packages: !include_dir_named integrations
-# Show links to resources in log and frontend
 
-# automation
 automation: !include automations.yaml
 
-# Enables the frontend
 frontend:
   javascript_version: latest
   themes: !include_dir_merge_named themes
 
-# lovelace
 lovelace:
   mode: yaml
 
-# hassio
 hassio:
-
-# Enables configuration UI
 config:
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-
-# Enables a map showing the location of tracked devices
 map:
-
 system_health:

@@ -9,8 +9,5 @@ switch.plug_158d00012db5eb:
   friendly_name: 桌下开关前
 switch.plug_158d0001e8975b:
   friendly_name: 床头开关
-switch.srsx99:
-  icon: mdi:cast
-  friendly_name: 音箱
 switch.shelly:
   friendly_name: 墙壁开关
