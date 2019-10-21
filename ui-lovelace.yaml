@@ -16,9 +16,6 @@ views:
               - entity: sensor.humidity_158d000149c947
                 graph: line
                 type: sensor
-              - entity: sensor.adguard_dns_queries_blocked
-                graph: line
-                type: sensor
             type: horizontal-stack
         type: vertical-stack
       - cards:
