@@ -22,3 +22,4 @@ config:
 http:
 map:
 system_health:
+mobile_app:
