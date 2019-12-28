@@ -70,6 +70,7 @@ views:
           - entity: binary_sensor.door_window_sensor_158d0001583bba
           - entity: binary_sensor.door_window_sensor_158d0001b862e7
           - entity: binary_sensor.door_window_sensor_158d0001bf47c1
+          - entity: device_tracker.zhong_ye_yi_hua
         title: 传感器
         type: glance
     title: Home
