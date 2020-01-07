@@ -10,5 +10,6 @@ homekit:
       - binary_sensor.remote_ui
       - switch.shelly
       - sensor.cpu_temperature
+      - device_tracker.zhong_ye_yi_hua
     exclude_domains:
       - automation
