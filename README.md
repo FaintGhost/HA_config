@@ -16,13 +16,12 @@ config/
 ├─integrations
 │  │  discovery.yaml
 │  │  groups.yaml
-|  |  history.yaml
+│  │  history.yaml
 │  │  homekit.yaml
-|  |  logbook.yaml
+│  │  logbook.yaml
 │  │  media_player.yaml
 │  │  pihole.yaml
 │  │  scripts.yaml
-│  │  speedtest.yaml
 │  │  weather.yaml
 │  │  zone.yaml
 │  │

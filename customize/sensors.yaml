@@ -8,9 +8,5 @@ sensor.temperature_158d000149c947:
   friendly_name: 温度
 sensor.humidity_158d000149c947:
   friendly_name: 湿度
-sensor.speedtest_download:
-  friendly_name: 下行
-sensor.speedtest_upload:
-  friendly_name: 上行
 sensor.cpu_temperature:
   friendly_name: CPU温度

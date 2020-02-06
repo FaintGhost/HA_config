@@ -20,12 +20,6 @@ views:
         type: vertical-stack
       - cards:
           - cards:
-              - entity: sensor.speedtest_download
-                graph: line
-                type: sensor
-              - entity: sensor.speedtest_upload
-                graph: line
-                type: sensor
               - entity: sensor.cpu_temperature
                 type: sensor
                 graph: line                
