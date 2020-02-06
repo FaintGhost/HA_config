@@ -1,11 +1,4 @@
 title: 智能家居管理系统
-background: var(--background-image)
-custom_header:
-  compact_mode: true
-  background: var(--app-header-background-color)
-  elements_color: var(--app-header-text-color)
-  active_tab_color: var(--state-icon-active-color)
-  tab_indicator_color: var(--state-icon-active-color)
 views:
   - cards:
       - entity: weather.dark_sky
