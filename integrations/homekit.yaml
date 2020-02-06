@@ -11,5 +11,6 @@ homekit:
       - switch.shelly
       - sensor.cpu_temperature
       - device_tracker.zhong_ye_yi_hua
+      - binary_sensor.night_light_nightlight
     exclude_domains:
       - automation
