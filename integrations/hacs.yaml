@@ -1,0 +1,5 @@
+hacs:
+  token: !secret hacs_token
+  sidepanel_title: Community
+  sidepanel_icon: mdi:alpha-c-box
+  appdaemon: true
