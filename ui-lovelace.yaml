@@ -58,7 +58,7 @@ views:
           - entity: switch.plug_158d000154b2cb
           - entity: switch.plug_158d0001e89755
           - entity: switch.plug_158d000236c60a
-          - entity: switch.plug_158d00012db5eb
+          # - entity: switch.plug_158d00012db5eb
           - entity: switch.plug_158d0001e8975b
         title: 开关
         type: entities

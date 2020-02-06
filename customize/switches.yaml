@@ -5,8 +5,8 @@ switch.plug_158d0001e89755:
   friendly_name: 地下开关
 switch.plug_158d000236c60a:
   friendly_name: 桌下开关后
-switch.plug_158d00012db5eb:
-  friendly_name: 桌下开关前
+# switch.plug_158d00012db5eb:
+#   friendly_name: 桌下开关前
 switch.plug_158d0001e8975b:
   friendly_name: 床头开关
 switch.shelly:
