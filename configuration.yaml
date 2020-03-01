@@ -17,8 +17,8 @@ frontend:
 lovelace:
   mode: yaml
 
-recorder:
-  db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
+# recorder:
+#   db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
 
 hassio:
 config:
