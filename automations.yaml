@@ -58,6 +58,14 @@
       scene: '1'
     entity_id: light.doorway_light
     service: xiaomi_miio.light_set_scene
+  - data:
+      brightness: 100
+      rgb_color:
+      - 255
+      - 255
+      - 255
+    entity_id: light.toilet_light
+    service: yeelight.set_color_scene
 - id: '1553521409525'
   alias: 【全天】关闭卧室门自动关灯
   trigger:
@@ -72,17 +80,6 @@
   - data: {}
     entity_id: light.toilet_light
     service: light.turn_off
-- id: '1553521449702'
-  alias: 【白天】卫生间有人自动开灯
-  trigger:
-  - entity_id: binary_sensor.motion_sensor_158d00010f84dd
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data: {}
-    entity_id: light.toilet_light
-    service: light.turn_on
 - id: '1553522046658'
   alias: 【全天】走廊无人自动关闭走廊灯
   trigger:
@@ -94,6 +91,9 @@
   action:
   - data: {}
     entity_id: light.doorway_light
+    service: light.turn_off
+  - data: {}
+    entity_id: light.toilet_light
     service: light.turn_off
 - id: '1553522387196'
   alias: 【白天】走廊有人明亮场景
@@ -110,6 +110,14 @@
       scene: '1'
     entity_id: light.doorway_light
     service: xiaomi_miio.light_set_scene
+  - data:
+      brightness: 100
+      rgb_color:
+      - 255
+      - 255
+      - 255
+    entity_id: light.toilet_light
+    service: yeelight.set_color_scene
 - id: '1553533724671'
   alias: 【夜间】打开卧室门起夜场景
   trigger:
@@ -125,6 +133,14 @@
       scene: '4'
     entity_id: light.doorway_light
     service: xiaomi_miio.light_set_scene
+  - data:
+      brightness: 1
+      rgb_color:
+      - 255
+      - 164
+      - 73
+    entity_id: light.toilet_light
+    service: yeelight.set_color_scene
 - id: '1553534072049'
   alias: 【夜间】走廊有人起夜场景
   trigger:
@@ -140,3 +156,45 @@
       scene: '4'
     entity_id: light.doorway_light
     service: xiaomi_miio.light_set_scene
+  - data:
+      brightness: 1
+      rgb_color:
+      - 255
+      - 164
+      - 73
+    entity_id: light.toilet_light
+    service: yeelight.set_color_scene
+- id: '1583114996904'
+  alias: 【夜间】起夜自动亮灯
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.motion_sensor_158d0002f98ea9
+    platform: state
+    to: 'on'
+  condition:
+  - after: 00:00:00
+    before: 08:00:00
+    condition: time
+  action:
+  - data: {}
+    entity_id: light.night_light
+    service: light.turn_on
+  - data: {}
+    entity_id: light.light_strip
+    service: light.turn_on
+- id: '1583115118210'
+  alias: 【夜间】上床自动关灯
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.motion_sensor_158d0002f98ea9
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.night_light
+    service: light.turn_off
+  - data: {}
+    entity_id: light.light_strip
+    service: light.turn_off
