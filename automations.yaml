@@ -1,5 +1,5 @@
 - id: '1553519761130'
-  alias: 打开厨房门自动开灯
+  alias: 【全天】打开厨房门自动开灯
   trigger:
   - entity_id: binary_sensor.door_window_sensor_158d0001583bba
     platform: state
@@ -10,18 +10,18 @@
     entity_id: light.kitchen_light
     service: light.turn_on
 - id: '1553520045882'
-  alias: 关闭厨房门自动关灯
+  alias: 【全天】关闭厨房门自动关灯
   trigger:
   - entity_id: binary_sensor.door_window_sensor_158d0001583bba
     platform: state
     to: 'off'
   condition: []
   action:
-  - data:
-      entity_id: light.kitchen_light
+  - data: {}
+    entity_id: light.kitchen_light
     service: light.turn_off
 - id: '1553520377604'
-  alias: 厨房有人自动开灯
+  alias: 【全天】厨房有人自动开灯
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d0001ad49f0
     platform: state
@@ -32,7 +32,7 @@
     entity_id: light.kitchen_light
     service: light.turn_on
 - id: '1553520656654'
-  alias: 厨房两分钟无人自动关灯
+  alias: 【全天】厨房两分钟无人自动关灯
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d0001ad49f0
     for: 00:00:30
@@ -40,11 +40,11 @@
     to: 'off'
   condition: []
   action:
-  - data:
-      entity_id: light.kitchen_light
+  - data: {}
+    entity_id: light.kitchen_light
     service: light.turn_off
 - id: '1553521288162'
-  alias: 白天打开卧室门明亮场景
+  alias: 【白天】打开卧室门明亮场景
   trigger:
   - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
     platform: state
@@ -55,36 +55,36 @@
     condition: time
   action:
   - data:
-      entity_id: light.doorway_light
       scene: '1'
-    service: light.xiaomi_miio_set_scene
+    entity_id: light.doorway_light
+    service: xiaomi_miio.light_set_scene
 - id: '1553521409525'
-  alias: 关闭卧室门自动关灯
+  alias: 【全天】关闭卧室门自动关灯
   trigger:
   - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
     platform: state
     to: 'off'
   condition: []
   action:
-  - data:
-      entity_id: light.doorway_light
+  - data: {}
+    entity_id: light.doorway_light
     service: light.turn_off
-  - data:
-      entity_id: light.toilet_light
+  - data: {}
+    entity_id: light.toilet_light
     service: light.turn_off
 - id: '1553521449702'
-  alias: 卫生间有人自动开灯
+  alias: 【白天】卫生间有人自动开灯
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
+  - entity_id: binary_sensor.motion_sensor_158d00010f84dd
     platform: state
     to: 'on'
   condition: []
   action:
-  - data:
-      entity_id: light.toilet_light
+  - data: {}
+    entity_id: light.toilet_light
     service: light.turn_on
 - id: '1553522046658'
-  alias: 走廊无人自动关灯
+  alias: 【全天】走廊无人自动关闭走廊灯
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d00010f84dd
     for: 00:00:30
@@ -92,13 +92,13 @@
     to: 'off'
   condition: []
   action:
-  - data:
-      entity_id: light.doorway_light
+  - data: {}
+    entity_id: light.doorway_light
     service: light.turn_off
 - id: '1553522387196'
-  alias: 白天走廊有人明亮场景
+  alias: 【白天】走廊有人明亮场景
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d00010f84dd
+  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
     platform: state
     to: 'on'
   condition:
@@ -107,11 +107,11 @@
     condition: time
   action:
   - data:
-      entity_id: light.doorway_light
       scene: '1'
-    service: light.xiaomi_miio_set_scene
+    entity_id: light.doorway_light
+    service: xiaomi_miio.light_set_scene
 - id: '1553533724671'
-  alias: 夜间打开卧室门起夜场景
+  alias: 【夜间】打开卧室门起夜场景
   trigger:
   - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
     platform: state
@@ -122,13 +122,13 @@
     condition: time
   action:
   - data:
-      entity_id: light.doorway_light
       scene: '4'
-    service: light.xiaomi_miio_set_scene
+    entity_id: light.doorway_light
+    service: xiaomi_miio.light_set_scene
 - id: '1553534072049'
-  alias: 夜间走廊有人起夜场景
+  alias: 【夜间】走廊有人起夜场景
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d00010f84dd
+  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
     platform: state
     to: 'on'
   condition:
@@ -137,6 +137,6 @@
     condition: time
   action:
   - data:
-      entity_id: light.doorway_light
       scene: '4'
-    service: light.xiaomi_miio_set_scene
+    entity_id: light.doorway_light
+    service: xiaomi_miio.light_set_scene

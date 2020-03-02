@@ -9,11 +9,11 @@ binary_sensor.door_window_sensor_158d0001bf47c1:
   friendly_name: 大门
   icon: mdi:door
 binary_sensor.motion_sensor_158d00010f84dd:
-  friendly_name: 走廊动作
+  friendly_name: 卫生间动作
 binary_sensor.motion_sensor_158d0001ad49f0:
   friendly_name: 厨房动作
 binary_sensor.motion_sensor_158d000257f9fb:
-  friendly_name: 卫生间动作
+  friendly_name: 走廊动作
 binary_sensor.motion_sensor_158d0002f98ea9:
   friendly_name: 卧室动作
 binary_sensor.cube_158d0002564da3:
