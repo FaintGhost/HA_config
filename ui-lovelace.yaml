@@ -44,9 +44,9 @@ views:
           - entity: light.kitchen_light
             tap_action:
               action: toggle
-          - entity: light.light_strip
-            tap_action:
-              action: toggle
+          # - entity: light.light_strip
+          #   tap_action:
+          #     action: toggle
         type: glance
       - entities:
           - entity: switch.plug_158d000154b2cb
@@ -54,6 +54,8 @@ views:
           - entity: switch.plug_158d000236c60a
           # - entity: switch.plug_158d00012db5eb
           - entity: switch.plug_158d0001e8975b
+          - entity: switch.wake_on_lan
+          - entity: switch.adguard_protection
         title: 开关
         type: entities
       - entities:
@@ -66,5 +68,17 @@ views:
           - entity: binary_sensor.door_window_sensor_158d0001bf47c1
           - entity: person.zhang_yao_wei
         title: 传感器
+        type: glance
+      - entities:
+          - entity: sensor.germany_coronavirus_confirmed
+            name: 确诊
+          - entity: sensor.germany_coronavirus_current
+            name: 现存
+          - entity: sensor.germany_coronavirus_recovered
+            name: 治愈
+          # - entity: switch.plug_158d00012db5eb
+          - entity: sensor.germany_coronavirus_deaths
+            name: 死亡
+        title: 疫情
         type: glance
     title: Home

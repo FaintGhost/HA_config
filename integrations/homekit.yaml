@@ -12,5 +12,9 @@ homekit:
       - sensor.cpu_temperature
       - device_tracker.zhong_ye_yi_hua
       - binary_sensor.night_light_nightlight
+      - switch.adguard_filtering
+      - switch.adguard_parental_control
+      - switch.adguard_safe_search
+      - switch.adguard_safe_browsing
     exclude_domains:
       - automation

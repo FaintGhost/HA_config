@@ -11,3 +11,16 @@ switch.plug_158d0001e8975b:
   friendly_name: 床头开关
 switch.shelly:
   friendly_name: 墙壁开关
+switch.adguard_protection:
+  friendly_name: AdGuard 保护
+switch.adguard_filtering:
+  friendly_name: AdGuard 过滤器
+switch.adguard_parental_control:
+  friendly_name: AdGuard 家长控制
+switch.adguard_safe_browsing:
+  friendly_name: AdGuard 浏览安全
+switch.adguard_safe_search:
+  friendly_name: AdGuard 安全搜索
+switch.wake_on_lan:
+  friendly_name: 电脑
+  icon: mdi:desktop-tower

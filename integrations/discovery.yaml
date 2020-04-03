@@ -6,5 +6,4 @@ discovery:
     - songpal
     - xiaomi_gw
     - igd
-    - plex_mediaserver
     - harmony
