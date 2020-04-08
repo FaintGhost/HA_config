@@ -2,7 +2,7 @@
 sensor:
   - platform: template
     sensors:
-      summe_power:
+      load_power:
         friendly_name: "总功率"
         unit_of_measurement: 'W'
-        value_template: "{{ (state_attr('switch.plug_158d000236c60a', 'load_power') | int ) + (state_attr('switch.plug_158d0001e8975b', 'load_power') | int ) + (state_attr('switch.plug_158d0001e89755', 'load_power') | int ) + (state_attr('switch.plug_158d000154b2cb', 'load_power') | int ) }}"
+        value_template: "{{ (state_attr('switch.plug_158d00012db5eb', 'load_power') + state_attr('switch.plug_158d000154b2cb', 'load_power') + state_attr('switch.plug_158d0001e89755', 'load_power') + state_attr('switch.plug_158d0001e8975b', 'load_power') + state_attr('switch.plug_158d000236c60a', 'load_power')) | int }}"

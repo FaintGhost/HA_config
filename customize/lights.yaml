@@ -1,16 +1,20 @@
 # lights
 light.toilet_light:
   friendly_name: 厕所灯
+  icon: mdi:ceiling-light
 light.night_light:
   friendly_name: 床头灯
+  icon: mdi:lava-lamp
 light.light_strip:
   friendly_name: 灯带
 light.doorway_light:
   friendly_name: 走廊灯
+  icon: mdi:ceiling-light
 light.gateway_light_286c07892155:
   friendly_name: 网关灯
 light.kitchen_light:
   friendly_name: 厨房灯
+  icon: mdi:ceiling-light
 light.ceiling_light:
   friendly_name: 顶灯
   icon: mdi:wall-sconce-flat

@@ -5,4 +5,4 @@ sensor:
       power_consumed:
         friendly_name: "总耗电量"
         unit_of_measurement: 'kWh'
-        value_template: "{{ (state_attr('switch.plug_158d000236c60a', 'power_consumed') | multiply(0.001) | int ) + (state_attr('switch.plug_158d0001e8975b', 'power_consumed') | multiply(0.001) | int ) + (state_attr('switch.plug_158d0001e89755', 'power_consumed') | multiply(0.001) | int ) + (state_attr('switch.plug_158d000154b2cb', 'power_consumed') | multiply(0.001) | int ) }}"
+        value_template: "{{ (state_attr('switch.plug_158d00012db5eb', 'power_consumed') + state_attr('switch.plug_158d000154b2cb', 'power_consumed') + state_attr('switch.plug_158d0001e89755', 'power_consumed') + state_attr('switch.plug_158d0001e8975b', 'power_consumed') + state_attr('switch.plug_158d000236c60a', 'power_consumed')) | multiply(0.001) | int }}"

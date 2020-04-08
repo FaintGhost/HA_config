@@ -27,7 +27,7 @@ views:
           - type: horizontal-stack
             cards:
               - type: sensor
-                entity: sensor.summe_power
+                entity: sensor.load_power
                 graph: line
               - type: sensor
                 entity: sensor.power_consumed
@@ -81,6 +81,7 @@ views:
           - switch.plug_158d0001e89755
           - switch.plug_158d0001e8975b
           - switch.plug_158d000236c60a
+          - switch.plug_158d00012db5eb
           - switch.wake_on_lan
         show_header_toggle: false
         type: entities

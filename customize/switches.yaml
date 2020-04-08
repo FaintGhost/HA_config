@@ -1,14 +1,19 @@
 # switches
 switch.plug_158d000154b2cb:
-  friendly_name: 厨房开关
+  friendly_name: 厨房插座
+  icon: mdi:power-socket-jp
 switch.plug_158d0001e89755:
-  friendly_name: 地下开关
+  friendly_name: 地下插座
+  icon: mdi:power-socket-jp
 switch.plug_158d000236c60a:
-  friendly_name: 桌下开关后
-# switch.plug_158d00012db5eb:
-#   friendly_name: 桌下开关前
+  friendly_name: 桌下插座
+  icon: mdi:power-socket-jp
+switch.plug_158d00012db5eb:
+  friendly_name: 洗衣机插座
+  icon: mdi:power-socket-jp
 switch.plug_158d0001e8975b:
-  friendly_name: 床头开关
+  friendly_name: 床头插座
+  icon: mdi:power-socket-jp
 switch.shelly:
   friendly_name: 墙壁开关
 switch.adguard_protection:
