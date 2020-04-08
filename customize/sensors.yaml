@@ -24,3 +24,5 @@ sensor.adguard_average_processing_speed:
   friendly_name: AdGuard 平均处理时间
 sensor.summe_power:
   icon: mdi:power-socket-de
+sensor.power_consumed:
+  icon: mdi:flash

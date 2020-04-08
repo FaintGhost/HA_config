@@ -4,23 +4,22 @@
 config/
 │  automations.yaml
 │  configuration.yaml
+│  README.md
+│  secrets.yaml
 │  ui-lovelace.yaml
 │
 ├─customize
 │      binary_sensors.yaml
-│      groups.yaml
 │      lights.yaml
 │      sensors.yaml
 │      switches.yaml
 │
+├─deps
 ├─integrations
 │  │  discovery.yaml
-│  │  groups.yaml
 │  │  history.yaml
 │  │  homekit.yaml
 │  │  logbook.yaml
-│  │  media_player.yaml
-│  │  pihole.yaml
 │  │  scripts.yaml
 │  │  weather.yaml
 │  │  zone.yaml
@@ -31,11 +30,13 @@ config/
 │  │      kitchen_light.yaml
 │  │
 │  ├─sensor
+│  │      load_power_temp.yaml
 │  │      pi_cpu_temp.yaml
+│  │      power_consumed_temp.yaml
 │  │
 │  ├─switch
 │  │      shelly_switch.yaml
-│  │      template_switch.yaml
+│  │      wol.yaml
 │  │
 │  ├─xiaomi_aqara
 │  │      gateway.yaml
@@ -45,12 +46,10 @@ config/
 │          night_light.yaml
 │          toilet_light.yaml
 │
-├─node-red
-│     flows.json
-│     settings.js
-│
 └─themes
         dark_green.yaml
+        google_light_theme.yaml
+        green_dark_mode.yaml
         light_blue.yaml
         palms.yaml
 ```

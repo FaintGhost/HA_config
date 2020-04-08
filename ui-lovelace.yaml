@@ -1,7 +1,9 @@
 title: 智能家居管理系统
 views:
-  - cards:
-      - entity: weather.dark_sky
+  - badges:
+      - entity: person.zhang_yao_wei
+    cards:
+      - entity: weather.jia
         name: 莱比锡
         type: weather-forecast
       - aspect_ratio: 75%
@@ -9,76 +11,59 @@ views:
         url: >-
           https://embed.windy.com/embed2.html?lat=51.337&lon=12.377&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.067&detailLon=14.383&metricWind=default&metricTemp=default&radarRange=-1
       - cards:
-          - cards:
-              - entity: sensor.temperature_158d000149c947
-                graph: line
-                type: sensor
-              - entity: sensor.humidity_158d000149c947
-                graph: line
-                type: sensor
-            type: horizontal-stack
-        type: vertical-stack
+          - entity: sensor.temperature_158d000149c947
+            graph: line
+            type: sensor
+          - entity: sensor.humidity_158d000149c947
+            graph: line
+            type: sensor
+        type: horizontal-stack
       - cards:
-          - cards:
-              - entity: sensor.cpu_temperature
-                type: sensor
-                graph: line                
-            type: horizontal-stack
-        type: vertical-stack
+          - entity: sensor.summe_power
+            graph: line
+            type: sensor
+          - entity: sensor.power_consumed
+            graph: line
+            type: sensor
+        type: horizontal-stack
+      - entity: sensor.cpu_temperature
+        type: entity
       - entities:
-          - entity: light.doorway_light
-            tap_action:
-              action: toggle
-          - entity: light.toilet_light
-            tap_action:
-              action: toggle
           - entity: light.ceiling_light
-            tap_action:
-              action: toggle
+          - entity: light.doorway_light
+          - entity: light.toilet_light
           - entity: light.night_light
-            tap_action:
-              action: toggle
-          - entity: light.gateway_light_286c07892155
-            tap_action:
-              action: toggle
           - entity: light.kitchen_light
-            tap_action:
-              action: toggle
-          # - entity: light.light_strip
-          #   tap_action:
-          #     action: toggle
+          - entity: light.gateway_light_286c07892155
         type: glance
       - entities:
-          - entity: switch.plug_158d000154b2cb
-          - entity: switch.plug_158d0001e89755
-          - entity: switch.plug_158d000236c60a
-          # - entity: switch.plug_158d00012db5eb
-          - entity: switch.plug_158d0001e8975b
-          - entity: switch.wake_on_lan
+          - entity: sensor.adguard_average_processing_speed
           - entity: switch.adguard_protection
-        title: 开关
+        show_header_toggle: false
         type: entities
       - entities:
+          - entity: binary_sensor.door_window_sensor_158d0001bf47c1
+          - entity: binary_sensor.door_window_sensor_158d0001b862e7
+          - entity: binary_sensor.door_window_sensor_158d0001583bba
           - entity: binary_sensor.motion_sensor_158d00010f84dd
-          - entity: binary_sensor.motion_sensor_158d0001ad49f0
           - entity: binary_sensor.motion_sensor_158d000257f9fb
           - entity: binary_sensor.motion_sensor_158d0002f98ea9
-          - entity: binary_sensor.door_window_sensor_158d0001583bba
-          - entity: binary_sensor.door_window_sensor_158d0001b862e7
-          - entity: binary_sensor.door_window_sensor_158d0001bf47c1
-          - entity: person.zhang_yao_wei
+          - entity: binary_sensor.motion_sensor_158d0001ad49f0
+        show_icon: true
+        show_name: true
+        show_state: true
         title: 传感器
         type: glance
       - entities:
-          - entity: sensor.germany_coronavirus_confirmed
-            name: 确诊
-          - entity: sensor.germany_coronavirus_current
-            name: 现存
-          - entity: sensor.germany_coronavirus_recovered
-            name: 治愈
-          # - entity: switch.plug_158d00012db5eb
-          - entity: sensor.germany_coronavirus_deaths
-            name: 死亡
-        title: 疫情
-        type: glance
+          - switch.plug_158d000154b2cb
+          - switch.plug_158d0001e89755
+          - switch.shelly
+          - switch.plug_158d0001e8975b
+          - switch.plug_158d000236c60a
+          - switch.wake_on_lan
+        show_header_toggle: false
+        title: 开关
+        type: entities
+    panel: false
+    path: default_view
     title: Home
