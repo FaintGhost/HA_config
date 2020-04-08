@@ -13,3 +13,4 @@ light.kitchen_light:
   friendly_name: 厨房灯
 light.ceiling_light:
   friendly_name: 顶灯
+  icon: mdi:wall-sconce-flat

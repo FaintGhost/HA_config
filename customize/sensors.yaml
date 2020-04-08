@@ -22,3 +22,5 @@ sensor.adguard_safe_searches_enforced:
   friendly_name: AdGuard 强制安全搜索
 sensor.adguard_average_processing_speed:
   friendly_name: AdGuard 平均处理时间
+sensor.summe_power:
+  icon: mdi:power-socket-de

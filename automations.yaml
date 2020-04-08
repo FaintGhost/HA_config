@@ -35,7 +35,7 @@
   alias: 【全天】厨房两分钟无人自动关灯
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d0001ad49f0
-    for: 00:00:30
+    for: 00:03:00
     platform: state
     to: 'off'
   condition: []

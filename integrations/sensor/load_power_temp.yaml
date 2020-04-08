@@ -1,0 +1,8 @@
+# Example configuration.yaml entry
+sensor:
+  - platform: template
+    sensors:
+      summe_power:
+        friendly_name: "总功率"
+        unit_of_measurement: 'W'
+        value_template: "{{ (state_attr('switch.plug_158d000236c60a', 'load_power') | round(1) | float ) + (state_attr('switch.plug_158d0001e8975b', 'load_power') | round(1) | float ) + (state_attr('switch.plug_158d0001e89755', 'load_power') | round(1) | float ) + (state_attr('switch.plug_158d000154b2cb', 'load_power') | round(1) | float ) }}"
