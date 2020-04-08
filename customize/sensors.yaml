@@ -26,3 +26,11 @@ sensor.summe_power:
   icon: mdi:power-socket-de
 sensor.power_consumed:
   icon: mdi:flash
+sensor.germany_coronavirus_confirmed:
+  friendly_name: 已确诊
+sensor.germany_coronavirus_current:
+  friendly_name: 现存确诊
+sensor.germany_coronavirus_recovered:
+  friendly_name: 已治愈
+sensor.germany_coronavirus_deaths:
+  friendly_name: 已死亡
