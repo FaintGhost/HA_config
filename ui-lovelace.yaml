@@ -3,41 +3,41 @@ views:
   - badges:
       - entity: person.zhang_yao_wei
     cards:
-      - type: vertical-stack
-        cards:
-          - type: weather-forecast
-            entity: weather.jia
+      - cards:
+          - entity: weather.jia
             name: 莱比锡
-          - type: iframe
+            type: weather-forecast
+          - aspect_ratio: 75%
+            type: iframe
             url: >-
               https://embed.windy.com/embed2.html?lat=51.337&lon=12.377&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.067&detailLon=14.383&metricWind=default&metricTemp=default&radarRange=-1
-            aspect_ratio: 75%
-      - entity: sensor.cpu_temperature
+        type: vertical-stack
+      - entity: sensor.power_consumed
         type: entity
-      - type: vertical-stack
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.temperature_158d000149c947
+      - cards:
+          - cards:
+              - entity: sensor.temperature_158d000149c947
                 graph: line
-              - type: sensor
-                entity: sensor.humidity_158d000149c947
+                type: sensor
+              - entity: sensor.humidity_158d000149c947
                 graph: line
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.load_power
+                type: sensor
+            type: horizontal-stack
+          - cards:
+              - entity: sensor.load_power
                 graph: line
-              - type: sensor
-                entity: sensor.power_consumed
+                type: sensor
+              - entity: sensor.cpu_temperature
                 graph: line
-      - type: glance
-        entities:
+                type: sensor
+            type: horizontal-stack
+        type: vertical-stack
+      - entities:
           - entity: sensor.germany_coronavirus_confirmed
           - entity: sensor.germany_coronavirus_current
           - entity: sensor.germany_coronavirus_recovered
           - entity: sensor.germany_coronavirus_deaths
+        type: glance
       - entities:
           - entity: light.ceiling_light
             tap_action:
