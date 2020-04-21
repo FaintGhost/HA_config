@@ -171,9 +171,6 @@
   - data: {}
     entity_id: light.night_light
     service: light.turn_off
-  - data: {}
-    entity_id: light.light_strip
-    service: light.turn_off
 - id: '1583278034852'
   alias: 【全天】打开家门自动打开走廊灯
   description: ''

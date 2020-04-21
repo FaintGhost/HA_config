@@ -5,8 +5,8 @@ light.toilet_light:
 light.night_light:
   friendly_name: 床头灯
   icon: mdi:lava-lamp
-light.light_strip:
-  friendly_name: 灯带
+# light.light_strip:
+#   friendly_name: 灯带
 light.doorway_light:
   friendly_name: 走廊灯
   icon: mdi:ceiling-light
