@@ -1,4 +1,4 @@
 xiaomi_aqara:
-  discovery_retry: 5
+  discovery_retry: 10
   gateways:
     - key: !secret aqara_key

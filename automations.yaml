@@ -183,3 +183,31 @@
   - data: {}
     entity_id: light.doorway_light
     service: light.turn_on
+- id: '1587568616889'
+  alias: 【全天】魔方旋转90度开关顶灯
+  description: ''
+  trigger:
+  - event_data:
+      action_type: flip90
+      entity_id: binary_sensor.cube_158d0002564da3
+    event_type: xiaomi_aqara.cube_action
+    platform: event
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.ceiling_light
+    service: light.toggle
+- id: '1587568957708'
+  alias: 【全天】双击魔方开电脑
+  description: ''
+  trigger:
+  - event_data:
+      action_type: tap_twice
+      entity_id: binary_sensor.cube_158d0002564da3
+    event_type: xiaomi_aqara.cube_action
+    platform: event
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.wake_on_lan
+    service: switch.turn_on
