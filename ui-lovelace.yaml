@@ -1,7 +1,6 @@
 title: 智能家居管理系统
 views:
   - badges:
-      - entity: person.zhang_yao_wei
     cards:
       - cards:
           - entity: weather.jia
