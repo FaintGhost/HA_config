@@ -1,2 +1,24 @@
 # Enables support for tracking state changes over time
 history:
+  exclude:
+    domains:
+      - automation
+      - updater
+    entities:
+      - sensor.adguard_parental_control_blocked
+      - sensor.adguard_safe_browsing_blocked
+      - sensor.adguard_safe_searches_enforced
+      - switch.adguard_parental_control
+      - switch.adguard_safe_browsing
+      - switch.adguard_safe_search
+      - sensor.chu_fang_dong_zuo_battery
+      - sensor.chu_fang_men_battery
+      - sensor.da_men_battery
+      - sensor.mo_fang_battery
+      - sensor.wei_sheng_jian_dong_zuo_battery
+      - sensor.wen_shi_du_chuan_gan_qi_battery
+      - sensor.wo_shi_dong_zuo_battery
+      - sensor.wo_shi_men_battery
+      - sensor.wu_xian_kai_guan_battery
+      - sensor.zou_lang_dong_zuo_battery
+      - sensor.zigbee2mqtt_networkmap
