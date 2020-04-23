@@ -2,8 +2,8 @@ homekit:
   filter:
     exclude_entities:
       - switch.xiaomi_miio_switch
-      - sensor.illumination_158d0001ad49f0
-      - sensor.illumination_158d000257f9fb
+      - sensor.chu_fang_dong_zuo_illuminance
+      - sensor.zou_lang_dong_zuo_illuminance
       - sensor.illumination_286c07892155
       - sensor.0x00158d0002564da3_action
       - sensor.0x00158d0001563f1a_click
