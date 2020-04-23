@@ -9,6 +9,9 @@
   - data: {}
     entity_id: light.kitchen_light
     service: light.turn_on
+  - data: {}
+    entity_id: automation.chu_fang_liang_fen_zhong_wu_ren_zi_dong_guan_deng
+    service: automation.turn_on
 - id: '1553520045882'
   alias: 【全天】关闭厨房门自动关灯
   trigger:
@@ -20,6 +23,9 @@
   - data: {}
     entity_id: light.kitchen_light
     service: light.turn_off
+  - data: {}
+    entity_id: automation.chu_fang_liang_fen_zhong_wu_ren_zi_dong_guan_deng
+    service: automation.turn_off
 - id: '1553520377604'
   alias: 【全天】厨房有人自动开灯
   trigger:
@@ -61,6 +67,9 @@
   - data: {}
     entity_id: light.toilet_light
     service: light.turn_on
+  - data: {}
+    entity_id: automation.zou_lang_wu_ren_zi_dong_guan_deng
+    service: automation.turn_on
 - id: '1553521409525'
   alias: 【全天】关闭卧室门自动关灯
   trigger:
@@ -75,6 +84,9 @@
   - data: {}
     entity_id: light.toilet_light
     service: light.turn_off
+  - data: {}
+    entity_id: automation.zou_lang_wu_ren_zi_dong_guan_deng
+    service: automation.turn_off
 - id: '1553522046658'
   alias: 【全天】走廊无人自动关闭走廊灯
   trigger:
@@ -122,6 +134,9 @@
   - data: {}
     entity_id: light.toilet_light
     service: light.turn_on
+  - data: {}
+    entity_id: automation.zou_lang_wu_ren_zi_dong_guan_deng
+    service: automation.turn_on
 - id: '1553534072049'
   alias: 【夜间】走廊有人起夜场景
   trigger:
