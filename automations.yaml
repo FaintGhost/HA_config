@@ -1,7 +1,7 @@
 - id: '1553519761130'
   alias: 【全天】打开厨房门自动开灯
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001583bba
+  - entity_id: binary_sensor.0x00158d0001583bba_contact
     platform: state
     to: 'on'
   condition: []
@@ -12,7 +12,7 @@
 - id: '1553520045882'
   alias: 【全天】关闭厨房门自动关灯
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001583bba
+  - entity_id: binary_sensor.0x00158d0001583bba_contact
     platform: state
     to: 'off'
   condition: []
@@ -23,7 +23,7 @@
 - id: '1553520377604'
   alias: 【全天】厨房有人自动开灯
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d0001ad49f0
+  - entity_id: binary_sensor.0x00158d0001ad49f0_occupancy
     platform: state
     to: 'on'
   condition: []
@@ -34,7 +34,7 @@
 - id: '1553520656654'
   alias: 【全天】厨房两分钟无人自动关灯
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d0001ad49f0
+  - entity_id: binary_sensor.0x00158d0001ad49f0_occupancy
     for: 00:03:00
     platform: state
     to: 'off'
@@ -46,7 +46,7 @@
 - id: '1553521288162'
   alias: 【白天】打开卧室门明亮场景
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
+  - entity_id: binary_sensor.0x00158d0001b862e7_contact
     platform: state
     to: 'on'
   condition:
@@ -64,7 +64,7 @@
 - id: '1553521409525'
   alias: 【全天】关闭卧室门自动关灯
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
+  - entity_id: binary_sensor.0x00158d0001b862e7_contact
     platform: state
     to: 'off'
   condition: []
@@ -78,7 +78,7 @@
 - id: '1553522046658'
   alias: 【全天】走廊无人自动关闭走廊灯
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
+  - entity_id: binary_sensor.0x00158d000257f9fb_occupancy
     platform: state
     to: 'off'
   condition: []
@@ -89,7 +89,7 @@
 - id: '1553522387196'
   alias: 【白天】走廊有人明亮场景
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
+  - entity_id: binary_sensor.0x00158d000257f9fb_occupancy
     platform: state
     to: 'on'
   condition:
@@ -107,7 +107,7 @@
 - id: '1553533724671'
   alias: 【夜间】打开卧室门起夜场景
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001b862e7
+  - entity_id: binary_sensor.0x00158d0001b862e7_contact
     platform: state
     to: 'on'
   condition:
@@ -125,7 +125,7 @@
 - id: '1553534072049'
   alias: 【夜间】走廊有人起夜场景
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d000257f9fb
+  - entity_id: binary_sensor.0x00158d000257f9fb_occupancy
     platform: state
     to: 'on'
   condition:
@@ -144,7 +144,7 @@
   alias: 【夜间】起夜自动亮灯
   description: ''
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d0002f98ea9
+  - entity_id: binary_sensor.0x00158d0002f98ea9_occupancy
     platform: state
     to: 'on'
   condition:
@@ -159,7 +159,7 @@
   alias: 【夜间】上床自动关灯
   description: ''
   trigger:
-  - entity_id: binary_sensor.motion_sensor_158d0002f98ea9
+  - entity_id: binary_sensor.0x00158d0002f98ea9_occupancy
     from: 'on'
     platform: state
     to: 'off'
@@ -175,7 +175,7 @@
   alias: 【全天】打开家门自动打开走廊灯
   description: ''
   trigger:
-  - entity_id: binary_sensor.door_window_sensor_158d0001bf47c1
+  - entity_id: binary_sensor.0x00158d0001bf47c1_contact
     platform: state
     to: 'on'
   condition: []
@@ -187,27 +187,40 @@
   alias: 【全天】魔方旋转90度开关顶灯
   description: ''
   trigger:
-  - event_data:
-      action_type: flip90
-      entity_id: binary_sensor.cube_158d0002564da3
-    event_type: xiaomi_aqara.cube_action
-    platform: event
+  - device_id: 95f459ecb12349598fd80237ab6d42c9
+    discovery_id: 0x00158d0002564da3 action_flip90
+    domain: mqtt
+    platform: device
+    subtype: flip90
+    type: action
   condition: []
   action:
   - data: {}
     entity_id: light.ceiling_light
     service: light.toggle
-- id: '1587568957708'
-  alias: 【全天】双击魔方开电脑
+- id: '1587641118384'
+  alias: 【全天】HA启动自动重启zigbee2mqtt
   description: ''
   trigger:
-  - event_data:
-      action_type: tap_twice
-      entity_id: binary_sensor.cube_158d0002564da3
-    event_type: xiaomi_aqara.cube_action
-    platform: event
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      addon: 7ad98f9c_zigbee2mqtt
+    service: hassio.addon_restart
+- id: '1587646123407'
+  alias: 【全天】单击开关厨房插座
+  description: ''
+  trigger:
+  - device_id: 908ecd0c32064baca4487494dcfd0148
+    discovery_id: 0x00158d0001563f1a click_single
+    domain: mqtt
+    platform: device
+    subtype: single
+    type: click
   condition: []
   action:
   - data: {}
-    entity_id: switch.wake_on_lan
-    service: switch.turn_on
+    entity_id: switch.0x00158d000154b2cb_switch
+    service: switch.toggle

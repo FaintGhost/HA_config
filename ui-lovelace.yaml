@@ -16,15 +16,15 @@ views:
         type: entity
       - cards:
           - cards:
-              - entity: sensor.temperature_158d000149c947
+              - entity: sensor.0x00158d000149c947_temperature
                 graph: line
                 type: sensor
-              - entity: sensor.humidity_158d000149c947
+              - entity: sensor.0x00158d000149c947_humidity
                 graph: line
                 type: sensor
             type: horizontal-stack
           - cards:
-              - entity: sensor.load_power
+              - entity: sensor.power_loaded
                 graph: line
                 type: sensor
               - entity: sensor.cpu_temperature
@@ -54,9 +54,6 @@ views:
           - entity: light.kitchen_light
             tap_action:
               action: toggle
-          - entity: light.gateway_light_286c07892155
-            tap_action:
-              action: toggle
         type: glance
       - entities:
           - entity: sensor.adguard_average_processing_speed
@@ -64,27 +61,55 @@ views:
         show_header_toggle: false
         type: entities
       - entities:
-          - entity: binary_sensor.door_window_sensor_158d0001bf47c1
-          - entity: binary_sensor.door_window_sensor_158d0001b862e7
-          - entity: binary_sensor.door_window_sensor_158d0001583bba
-          - entity: binary_sensor.motion_sensor_158d00010f84dd
-          - entity: binary_sensor.motion_sensor_158d000257f9fb
-          - entity: binary_sensor.motion_sensor_158d0002f98ea9
-          - entity: binary_sensor.motion_sensor_158d0001ad49f0
+          - entity: binary_sensor.0x00158d0001bf47c1_contact
+          - entity: binary_sensor.0x00158d0001b862e7_contact
+          - entity: binary_sensor.0x00158d0001583bba_contact
+          - entity: binary_sensor.0x00158d00010f84dd_occupancy
+          - entity: binary_sensor.0x00158d000257f9fb_occupancy
+          - entity: binary_sensor.0x00158d0002f98ea9_occupancy
+          - entity: binary_sensor.0x00158d0001ad49f0_occupancy
         show_icon: true
         show_name: true
         show_state: true
         title: 传感器
         type: glance
       - entities:
-          - switch.plug_158d000154b2cb
-          - switch.plug_158d0001e89755
-          - switch.plug_158d0001e8975b
-          - switch.plug_158d000236c60a
-          - switch.plug_158d00012db5eb
-          - switch.wake_on_lan
+          - entity: switch.0x00158d000154b2cb_switch
+          - entity: switch.0x00158d0001e89755_switch
+          - entity: switch.0x00158d0001e8975b_switch
+          - entity: switch.0x00158d000236c60a_switch
+          - entity: switch.0x00158d00012db5eb_switch
+          - entity: switch.wake_on_lan
         show_header_toggle: false
         type: entities
     panel: false
     path: default_view
     title: Home
+  - title: Networkmap
+    path: networkmap
+    panel: true
+    cards: 
+      - type: custom:zigbee2mqtt-networkmap
+        entity: sensor.zigbee2mqtt_networkmap
+        # the following are optional:
+        mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
+        force: 3000 # decrease it to get smaller map if you have many devices
+        node_size: 16
+        font_size: 12
+        link_width: 2
+        height: 600 # height of the card
+        # use this css config or use whatever css tech to change look and feel,
+        # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes
+        css: |
+          :host {
+            --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
+            --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
+            --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);
+            --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);
+            --zigbee2mqtt-networkmap-hover-color: #be385d;
+            --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);
+            --zigbee2mqtt-networkmap-label-color: #127862;
+            --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);
+            --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
+            --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
+          }

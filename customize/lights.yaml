@@ -10,8 +10,8 @@ light.night_light:
 light.doorway_light:
   friendly_name: 走廊灯
   icon: mdi:ceiling-light
-light.gateway_light_286c07892155:
-  friendly_name: 网关灯
+# light.gateway_light_286c07892155:
+#   friendly_name: 网关灯
 light.kitchen_light:
   friendly_name: 厨房灯
   icon: mdi:ceiling-light
