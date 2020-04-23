@@ -5,4 +5,4 @@ sensor:
       power_loaded:
         friendly_name: "总功率"
         unit_of_measurement: 'W'
-        value_template: "{{ (state_attr('sensor.0x00158d00012db5eb_power', 'power') + state_attr('sensor.0x00158d000154b2cb_power', 'power') + state_attr('sensor.0x00158d0001e89755_power', 'power') + state_attr('sensor.0x00158d0001e8975b_power', 'power') + state_attr('sensor.0x00158d000236c60a_power', 'power')) | int }}"
+        value_template: "{{ (state_attr('sensor.chu_fang_cha_zuo_power', 'power') + state_attr('sensor.chuang_tou_cha_zuo_power', 'power') + state_attr('sensor.di_xia_cha_zuo_power', 'power') + state_attr('sensor.xi_yi_ji_cha_zuo_power', 'power') + state_attr('sensor.zhuo_xia_cha_zuo_power', 'power')) | int }}"

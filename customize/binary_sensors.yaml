@@ -1,18 +1,15 @@
 # binary sensors 
-binary_sensor.0x00158d0001583bba_contact:
+binary_sensor.chu_fang_men_contact:
   friendly_name: 厨房门
-  icon: mdi:door
-binary_sensor.0x00158d0001b862e7_contact:
+binary_sensor.wo_shi_men_contact:
   friendly_name: 卧室门
-  icon: mdi:door
-binary_sensor.0x00158d0001bf47c1_contact:
+binary_sensor.da_men_contact:
   friendly_name: 大门
-  icon: mdi:door
-binary_sensor.0x00158d00010f84dd_occupancy:
+binary_sensor.wei_sheng_jian_dong_zuo_occupancy:
   friendly_name: 卫生间动作
-binary_sensor.0x00158d0001ad49f0_occupancy:
+binary_sensor.chu_fang_dong_zuo_occupancy:
   friendly_name: 厨房动作
-binary_sensor.0x00158d000257f9fb_occupancy:
+binary_sensor.zou_lang_dong_zuo_occupancy:
   friendly_name: 走廊动作
-binary_sensor.0x00158d0002f98ea9_occupancy:
+binary_sensor.wo_shi_dong_zuo_occupancy:
   friendly_name: 卧室动作

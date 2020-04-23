@@ -5,4 +5,4 @@ sensor:
       power_consumed:
         friendly_name: "总耗电量"
         unit_of_measurement: 'kWh'
-        value_template: "{{ (state_attr('sensor.0x00158d00012db5eb_power', 'consumption') + state_attr('sensor.0x00158d000154b2cb_power', 'consumption') + state_attr('sensor.0x00158d0001e89755_power', 'consumption') + state_attr('sensor.0x00158d0001e8975b_power', 'consumption') + state_attr('sensor.0x00158d000236c60a_power', 'consumption')) | int }}"
+        value_template: "{{ (state_attr('sensor.chu_fang_cha_zuo_power', 'consumption') + state_attr('sensor.chuang_tou_cha_zuo_power', 'consumption') + state_attr('sensor.di_xia_cha_zuo_power', 'consumption') + state_attr('sensor.xi_yi_ji_cha_zuo_power', 'consumption') + state_attr('sensor.zhuo_xia_cha_zuo_power', 'consumption')) | int }}"

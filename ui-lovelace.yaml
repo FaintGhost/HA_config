@@ -16,10 +16,10 @@ views:
         type: entity
       - cards:
           - cards:
-              - entity: sensor.0x00158d000149c947_temperature
+              - entity: sensor.wen_shi_du_chuan_gan_qi_temperature
                 graph: line
                 type: sensor
-              - entity: sensor.0x00158d000149c947_humidity
+              - entity: sensor.wen_shi_du_chuan_gan_qi_humidity
                 graph: line
                 type: sensor
             type: horizontal-stack
@@ -61,46 +61,32 @@ views:
         show_header_toggle: false
         type: entities
       - entities:
-          - entity: binary_sensor.0x00158d0001bf47c1_contact
-          - entity: binary_sensor.0x00158d0001b862e7_contact
-          - entity: binary_sensor.0x00158d0001583bba_contact
-          - entity: binary_sensor.0x00158d00010f84dd_occupancy
-          - entity: binary_sensor.0x00158d000257f9fb_occupancy
-          - entity: binary_sensor.0x00158d0002f98ea9_occupancy
-          - entity: binary_sensor.0x00158d0001ad49f0_occupancy
+          - entity: binary_sensor.da_men_contact
+          - entity: binary_sensor.wo_shi_men_contact
+          - entity: binary_sensor.chu_fang_men_contact
+          - entity: binary_sensor.wei_sheng_jian_dong_zuo_occupancy
+          - entity: binary_sensor.zou_lang_dong_zuo_occupancy
+          - entity: binary_sensor.wo_shi_dong_zuo_occupancy
+          - entity: binary_sensor.chu_fang_dong_zuo_occupancy
         show_icon: true
         show_name: true
         show_state: true
         title: 传感器
         type: glance
       - entities:
-          - entity: switch.0x00158d000154b2cb_switch
-          - entity: switch.0x00158d0001e89755_switch
-          - entity: switch.0x00158d0001e8975b_switch
-          - entity: switch.0x00158d000236c60a_switch
-          - entity: switch.0x00158d00012db5eb_switch
+          - entity: switch.chu_fang_cha_zuo_switch
+          - entity: switch.chuang_tou_cha_zuo_switch
+          - entity: switch.zhuo_xia_cha_zuo_switch
+          - entity: switch.di_xia_cha_zuo_switch
+          - entity: switch.xi_yi_ji_cha_zuo_switch
           - entity: switch.wake_on_lan
         show_header_toggle: false
         type: entities
     panel: false
     path: default_view
     title: Home
-  - title: Networkmap
-    path: networkmap
-    panel: true
-    cards: 
-      - type: custom:zigbee2mqtt-networkmap
-        entity: sensor.zigbee2mqtt_networkmap
-        # the following are optional:
-        mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
-        force: 3000 # decrease it to get smaller map if you have many devices
-        node_size: 16
-        font_size: 12
-        link_width: 2
-        height: 600 # height of the card
-        # use this css config or use whatever css tech to change look and feel,
-        # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes
-        css: |
+  - cards:
+      - css: |
           :host {
             --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
             --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
@@ -113,3 +99,14 @@ views:
             --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
             --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
           }
+        entity: sensor.zigbee2mqtt_networkmap
+        font_size: 12
+        force: 3000
+        height: 700
+        link_width: 2
+        mqtt_base_topic: zigbee2mqtt
+        node_size: 16
+        type: 'custom:zigbee2mqtt-networkmap'
+    panel: true
+    path: networkmap
+    title: Networkmap

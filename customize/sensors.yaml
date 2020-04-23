@@ -1,10 +1,10 @@
-sensor.0x00158d0001ad49f0_illuminance:
+sensor.chu_fang_dong_zuo_illuminance:
   friendly_name: 厨房亮度
-sensor.0x00158d000257f9fb_illuminance:
+sensor.zou_lang_dong_zuo_illuminance:
   friendly_name: 走廊亮度
-sensor.0x00158d000149c947_temperature:
+sensor.wen_shi_du_chuan_gan_qi_temperature:
   friendly_name: 温度
-sensor.0x00158d000149c947_humidity:
+sensor.wen_shi_du_chuan_gan_qi_humidity:
   friendly_name: 湿度
 sensor.cpu_temperature:
   friendly_name: CPU温度
