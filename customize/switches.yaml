@@ -29,3 +29,4 @@ switch.adguard_safe_search:
 switch.wake_on_lan:
   friendly_name: 电脑
   icon: mdi:desktop-tower
+  assumed_state: false

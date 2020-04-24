@@ -23,8 +23,12 @@ lovelace:
 recorder:
   db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
 
+http:
+  base_url: !secret base_url
+  use_x_forwarded_for: true
+  trusted_proxies: 127.0.0.1
+
 hassio:
 config:
-http:
 map:
 system_health:
