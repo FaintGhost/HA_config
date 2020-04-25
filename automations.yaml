@@ -199,7 +199,7 @@
     entity_id: light.doorway_light
     service: light.turn_on
 - id: '1587568616889'
-  alias: 【全天】魔方旋转90度开关顶灯
+  alias: 【全天】魔方翻转90度开关顶灯
   description: ''
   trigger:
   - payload: flip90
@@ -233,3 +233,53 @@
   - data: {}
     entity_id: switch.chu_fang_cha_zuo_switch
     service: switch.toggle
+- id: '1587837631926'
+  alias: VolumeDown
+  description: ''
+  trigger:
+  - payload: rotate_left
+    platform: mqtt
+    topic: zigbee2mqtt/魔方/action
+  condition: []
+  action:
+  - data: {}
+    entity_id: media_player.srs_x99
+    service: media_player.volume_down
+- id: '1587837678826'
+  alias: VolumeUp
+  description: ''
+  trigger:
+  - payload: rotate_right
+    platform: mqtt
+    topic: zigbee2mqtt/魔方/action
+  condition: []
+  action:
+  - data: {}
+    entity_id: media_player.srs_x99
+    service: media_player.volume_up
+- id: '1587838766200'
+  alias: 【全天】敲击魔方开关音箱
+  description: ''
+  trigger:
+  - payload: tap
+    platform: mqtt
+    topic: zigbee2mqtt/魔方/action
+  condition: []
+  action:
+  - data: {}
+    entity_id: media_player.srs_x99
+    service: media_player.toggle
+- id: '1587852857701'
+  alias: 【全天】打开音箱自动切换Audio in
+  description: ''
+  trigger:
+  - entity_id: media_player.srs_x99
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - delay: 00:00:01
+  - data:
+      source: Audio in
+    entity_id: media_player.srs_x99
+    service: media_player.select_source

@@ -17,9 +17,11 @@ frontend:
 lovelace:
   # mode: yaml
   # resources:
-  # - url: /local/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+  # - url: /local/zigbee2mqtt-networkmap.js
   #   type: module
-  # - url: /local/config-template-card/config-template-card.js
+  # - url: /local/config-template-card.js
+  #   type: module
+  # - url: /local/mini-media-player-bundle.js?v=1.7.0
   #   type: module
 
 recorder:

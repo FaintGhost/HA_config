@@ -2,3 +2,4 @@ logger:
   default: info
   logs:
     homeassistant.components.mqtt: warning
+    homeassistant.components.songpal: debug
