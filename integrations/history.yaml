@@ -25,3 +25,5 @@ history:
       - sensor.wu_xian_kai_guan_battery
       - sensor.zou_lang_dong_zuo_battery
       - sensor.zigbee2mqtt_networkmap
+      - binary_sensor.night_light_nightlight
+      - binary_sensor.0x7cb03eaa0a05a30f_update_available
