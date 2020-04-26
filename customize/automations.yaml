@@ -1,0 +1,51 @@
+# All day
+automation.chu_fang_liang_fen_zhong_wu_ren_zi_dong_guan_deng:
+  icon: mdi:theme-light-dark
+automation.chu_fang_you_ren_zi_dong_kai_deng:
+  icon: mdi:theme-light-dark
+automation.da_kai_chu_fang_men_zi_dong_kai_deng:
+  icon: mdi:theme-light-dark
+automation.disable_zigbee_joining:
+  icon: mdi:theme-light-dark
+automation.disable_zigbee_joining_by_timer:
+  icon: mdi:theme-light-dark
+automation.enable_zigbee_joining:
+  icon: mdi:theme-light-dark
+automation.guan_bi_chu_fang_men_zi_dong_guan_deng:
+  icon: mdi:theme-light-dark
+automation.guan_bi_wo_shi_men_zi_dong_guan_deng:
+  icon: mdi:theme-light-dark
+automation.haqi_dong_zhong_qi_zigbee2mqtt:
+  icon: mdi:theme-light-dark
+automation.quan_tian_da_kai_jia_men_zi_dong_da_kai_zou_lang_deng:
+  icon: mdi:theme-light-dark
+automation.quan_tian_da_kai_yin_xiang_zi_dong_qie_huan_audio_in:
+  icon: mdi:theme-light-dark
+automation.quan_tian_dan_ji_kai_guan_chu_fang_cha_zuo:
+  icon: mdi:theme-light-dark
+automation.quan_tian_mo_fang_xuan_zhuan_90du_kai_guan_ding_deng:
+  icon: mdi:theme-light-dark
+automation.turnonsrsx99:
+  icon: mdi:theme-light-dark
+automation.volumedown:
+  icon: mdi:theme-light-dark
+automation.volumeup:
+  icon: mdi:theme-light-dark
+automation.zou_lang_wu_ren_zi_dong_guan_deng:
+  icon: mdi:theme-light-dark
+
+# Day
+automation.bai_tian_da_kai_wo_shi_men_ming_liang_chang_jing:
+  icon: mdi:weather-sunny
+automation.bai_tian_zou_lang_you_ren_ming_liang_chang_jing:
+  icon: mdi:weather-sunny
+
+# Night
+automation.ye_jian_da_kai_wo_shi_men_qi_ye_chang_jing:
+  icon: mdi:weather-night
+automation.ye_jian_qi_ye_zi_dong_liang_deng:
+  icon: mdi:weather-night
+automation.ye_jian_shang_chuang_zi_dong_guan_deng:
+  icon: mdi:weather-night
+automation.ye_jian_zou_lang_you_ren_qi_ye_chang_jing:
+  icon: mdi:weather-night

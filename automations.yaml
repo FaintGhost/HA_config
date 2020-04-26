@@ -234,7 +234,7 @@
     entity_id: switch.chu_fang_cha_zuo_switch
     service: switch.toggle
 - id: '1587837631926'
-  alias: VolumeDown
+  alias: 【全天】左旋魔方降低音量
   description: ''
   trigger:
   - payload: rotate_left
@@ -246,7 +246,7 @@
     entity_id: media_player.srs_x99
     service: media_player.volume_down
 - id: '1587837678826'
-  alias: VolumeUp
+  alias: 【全天】右旋魔方调高音量
   description: ''
   trigger:
   - payload: rotate_right
@@ -283,21 +283,21 @@
     entity_id: media_player.srs_x99
     service: media_player.select_source
 - id: enable_zigbee_join
-  alias: Enable Zigbee joining
+  alias: 【全天】开启网关添加设备
   trigger:
+  - entity_id: input_boolean.zigbee_permit_join
     platform: state
-    entity_id: input_boolean.zigbee_permit_join
     to: 'on'
   action:
-  - service: mqtt.publish
-    data:
-      topic: zigbee2mqtt/bridge/config/permit_join
+  - data:
       payload: 'true'
-  - service: timer.start
-    data:
+      topic: zigbee2mqtt/bridge/config/permit_join
+    service: mqtt.publish
+  - data:
       entity_id: timer.zigbee_permit_join
+    service: timer.start
 - id: disable_zigbee_join
-  alias: Disable Zigbee joining
+  alias: 【全天】关闭网关添加设备
   trigger:
   - entity_id: input_boolean.zigbee_permit_join
     platform: state
@@ -311,17 +311,17 @@
       entity_id: timer.zigbee_permit_join
     service: timer.cancel
 - id: disable_zigbee_join_timer
-  alias: Disable Zigbee joining by timer
+  alias: 【全天】倒计时结束关闭网关添加设备
   trigger:
-  - platform: event
-    event_type: timer.finished
-    event_data:
+  - event_data:
       entity_id: timer.zigbee_permit_join
+    event_type: timer.finished
+    platform: event
   action:
-  - service: mqtt.publish
-    data:
-      topic: zigbee2mqtt/bridge/config/permit_join
+  - data:
       payload: 'false'
-  - service: input_boolean.turn_off
-    data:
+      topic: zigbee2mqtt/bridge/config/permit_join
+    service: mqtt.publish
+  - data:
       entity_id: input_boolean.zigbee_permit_join
+    service: input_boolean.turn_off

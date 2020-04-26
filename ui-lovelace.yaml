@@ -32,6 +32,10 @@ views:
             type: horizontal-stack
         type: vertical-stack
       - entity: media_player.srs_x99
+        hide:
+          controls: true
+          icon_state: false
+          power_state: false
         type: 'custom:mini-media-player'
       - entities:
           - entity: sensor.germany_coronavirus_confirmed
@@ -57,8 +61,8 @@ views:
               action: toggle
         type: glance
       - entities:
-          - entity: sensor.adguard_average_processing_speed
           - entity: switch.adguard_protection
+          - entity: sensor.adguard_average_processing_speed
         show_header_toggle: false
         type: entities
       - entities:
@@ -124,10 +128,13 @@ views:
         title: 走廊
         type: entities
       - entities:
-          - entity: automation.ye_jian_qi_ye_zi_dong_liang_deng
-          - entity: automation.ye_jian_shang_chuang_zi_dong_guan_deng
           - entity: automation.haqi_dong_zhong_qi_zigbee2mqtt
           - entity: automation.quan_tian_mo_fang_xuan_zhuan_90du_kai_guan_ding_deng
+          - entity: automation.enable_zigbee_joining
+          - entity: automation.disable_zigbee_joining
+          - entity: automation.disable_zigbee_joining_by_timer
+          - entity: automation.ye_jian_qi_ye_zi_dong_liang_deng
+          - entity: automation.ye_jian_shang_chuang_zi_dong_guan_deng
         title: 卧室
         type: entities
       - entities:
@@ -151,7 +158,6 @@ views:
         title: 系统
         type: entities
       - entities:
-          - entity: sensor.0x7cb03eaa0a05a30f_linkquality
           - entity: sensor.chu_fang_cha_zuo_linkquality
           - entity: sensor.chu_fang_dong_zuo_linkquality
           - entity: sensor.chu_fang_men_linkquality
