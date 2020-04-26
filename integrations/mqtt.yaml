@@ -1,6 +1,6 @@
 mqtt:
   discovery: true
-  broker: 192.168.1.2
+  broker: core-mosquitto
   port: 1883
   username: FaintGhost
   password: 941231zyW@

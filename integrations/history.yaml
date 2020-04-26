@@ -4,6 +4,9 @@ history:
     domains:
       - automation
       - updater
+      - script
+      - timer
+      - remote
     entities:
       - sensor.adguard_parental_control_blocked
       - sensor.adguard_safe_browsing_blocked

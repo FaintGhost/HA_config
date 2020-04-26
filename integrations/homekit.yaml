@@ -4,15 +4,22 @@ homekit:
       - switch.xiaomi_miio_switch
       - sensor.chu_fang_dong_zuo_illuminance
       - sensor.zou_lang_dong_zuo_illuminance
-      - sensor.illumination_286c07892155
       - binary_sensor.remote_ui
       - switch.shelly
       - sensor.cpu_temperature
-      - device_tracker.zhong_ye_yi_hua
       - binary_sensor.night_light_nightlight
       - switch.adguard_filtering
       - switch.adguard_parental_control
       - switch.adguard_safe_search
       - switch.adguard_safe_browsing
+      - binary_sensor.0x7cb03eaa0a05a30f_update_available
     exclude_domains:
       - automation
+      - script
+      - remote
+    include_entities:
+      - media_player.srs_x99
+  entity_config:
+    media_player.srs_x99:
+      feature_list:
+        - feature: on_off

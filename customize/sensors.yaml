@@ -40,3 +40,7 @@ sensor.0x00158d0002564da3_action:
   friendly_name: 魔方控制器
 sensor.0x00158d0001563f1a_click:
   friendly_name: 无线开关
+timer.zigbee_permit_join:
+  friendly_name: 剩余时间
+sensor.wang_guan_zhuang_tai:
+  friendly_name: 网关状态

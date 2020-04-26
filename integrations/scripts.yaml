@@ -2,12 +2,3 @@ script:
   homeassistant_restart:
     sequence:
       - service: homeassistant.restart
-  homeassistant_checkconfig:
-    sequence:
-      - service: homeassistant.check_config
-  automation_reload:
-    sequence:
-      - service: automation.reload
-  script_reload:
-    sequence:
-      - service: script.reload

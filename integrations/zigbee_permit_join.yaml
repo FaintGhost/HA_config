@@ -1,0 +1,16 @@
+input_boolean:
+  zigbee_permit_join:
+    name: 添加新设备
+    initial: off
+    icon: mdi:cellphone-wireless
+
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 60
+
+sensor:
+  - platform: mqtt
+    name: 网关状态
+    icon: mdi:router-wireless
+    state_topic: "zigbee2mqtt/bridge/state"
