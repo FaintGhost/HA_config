@@ -13,6 +13,7 @@ homekit:
       - switch.adguard_safe_search
       - switch.adguard_safe_browsing
       - binary_sensor.0x7cb03eaa0a05a30f_update_available
+      - input_boolean.zigbee_permit_join
     exclude_domains:
       - automation
       - script

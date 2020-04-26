@@ -14,3 +14,9 @@ sensor:
     name: 网关状态
     icon: mdi:router-wireless
     state_topic: "zigbee2mqtt/bridge/state"
+    value_template: >-
+      {% if value | string == 'online' %}
+        在线
+      {% else %}
+        离线
+      {% endif %}
