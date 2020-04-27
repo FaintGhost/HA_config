@@ -3,9 +3,9 @@ sensor.chu_fang_dong_zuo_illuminance:
 sensor.zou_lang_dong_zuo_illuminance:
   friendly_name: 走廊亮度
 sensor.wen_shi_du_chuan_gan_qi_temperature:
-  friendly_name: 温度
+  friendly_name: 卧室温度
 sensor.wen_shi_du_chuan_gan_qi_humidity:
-  friendly_name: 湿度
+  friendly_name: 卧室湿度
 sensor.cpu_temperature:
   friendly_name: CPU温度
 sensor.adguard_safe_browsing_blocked:
@@ -44,3 +44,7 @@ timer.zigbee_permit_join:
   friendly_name: 剩余时间
 sensor.wang_guan_zhuang_tai:
   friendly_name: 网关状态
+sensor.doorway_temp_temperature:
+  friendly_name: 走廊温度
+sensor.doorway_temp_humidity:
+  friendly_name: 走廊湿度

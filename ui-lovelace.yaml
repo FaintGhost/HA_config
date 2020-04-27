@@ -50,7 +50,7 @@ views:
           - entity: light.doorway_light
             tap_action:
               action: toggle
-          - entity: light.0x7cb03eaa0a05a30f_light
+          - entity: light.0x7cb03eaa0a00c711_light
             tap_action:
               action: toggle
           - entity: light.night_light

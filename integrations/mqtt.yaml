@@ -2,11 +2,11 @@ mqtt:
   discovery: true
   broker: core-mosquitto
   port: 1883
-  username: FaintGhost
-  password: 941231zyW@
+  username: !secret mqtt_username
+  password: !secret mqtt_password
   birth_message:
-    topic: 'hass/status'
-    payload: 'online'
+    topic: "hass/status"
+    payload: "online"
   will_message:
-    topic: 'hass/status'
-    payload: 'offline'
+    topic: "hass/status"
+    payload: "offline"

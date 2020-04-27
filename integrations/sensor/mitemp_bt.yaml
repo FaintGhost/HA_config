@@ -1,0 +1,10 @@
+sensor:
+  - platform: mitemp_bt
+    mac: !secret mitemp_bt_mac
+    name: Doorway Temp
+    force_update: true
+    median: 1
+    monitored_conditions:
+      - temperature
+      - humidity
+      - battery

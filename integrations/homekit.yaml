@@ -12,8 +12,8 @@ homekit:
       - switch.adguard_parental_control
       - switch.adguard_safe_search
       - switch.adguard_safe_browsing
-      - binary_sensor.0x7cb03eaa0a05a30f_update_available
       - input_boolean.zigbee_permit_join
+      - binary_sensor.0x7cb03eaa0a00c711_update_available
     exclude_domains:
       - automation
       - script
