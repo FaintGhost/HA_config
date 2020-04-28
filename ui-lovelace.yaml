@@ -15,10 +15,10 @@ views:
         type: entity
       - cards:
           - cards:
-              - entity: sensor.wen_shi_du_chuan_gan_qi_temperature
+              - entity: sensor.temp_humidity_sensor_temperature
                 graph: line
                 type: sensor
-              - entity: sensor.wen_shi_du_chuan_gan_qi_humidity
+              - entity: sensor.temp_humidity_sensor_humidity
                 graph: line
                 type: sensor
             type: horizontal-stack
@@ -53,10 +53,10 @@ views:
           - entity: light.0x7cb03eaa0a00c711_light
             tap_action:
               action: toggle
-          - entity: light.night_light
+          - entity: light.kitchen_light
             tap_action:
               action: toggle
-          - entity: light.kitchen_light
+          - entity: light.night_light
             tap_action:
               action: toggle
         type: glance
@@ -166,7 +166,7 @@ views:
           - entity: sensor.di_xia_cha_zuo_linkquality
           - entity: sensor.mo_fang_linkquality
           - entity: sensor.wei_sheng_jian_dong_zuo_linkquality
-          - entity: sensor.wen_shi_du_chuan_gan_qi_linkquality
+          - entity: sensor.temp_humidity_sensor_linkquality
           - entity: sensor.wo_shi_dong_zuo_linkquality
           - entity: sensor.wo_shi_men_linkquality
           - entity: sensor.wu_xian_kai_guan_linkquality
