@@ -7,7 +7,7 @@ input_boolean:
 timer:
   zigbee_permit_join:
     name: Time remaining
-    duration: '00:00:30'
+    duration: '00:03:00'
 
 sensor:
   - platform: mqtt
