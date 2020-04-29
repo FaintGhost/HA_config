@@ -1,8 +1,5 @@
 logger:
   default: info
   logs:
-    homeassistant.components.mqtt: warning
-    songpal.service: fatal
-    zeroconf: error
-    homeassistant.components.zeroconf: critical
-    homeassistant.helpers.entity: error
+    homeassistant.components.mqtt: info
+    homeassistant.helpers.entity: critical

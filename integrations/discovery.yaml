@@ -7,3 +7,4 @@ discovery:
     - xiaomi_gw
     - igd
     - harmony
+    - homekit
