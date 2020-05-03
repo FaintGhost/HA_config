@@ -56,6 +56,9 @@
     platform: state
     to: 'on'
   condition:
+  - condition: state
+    entity_id: light.doorway_light
+    state: 'off'
   - after: 08:00:00
     before: 00:00:00
     condition: time
@@ -95,7 +98,10 @@
   - entity_id: binary_sensor.zou_lang_dong_zuo_occupancy
     platform: state
     to: 'off'
-  condition: []
+  condition:
+  - condition: state
+    entity_id: light.doorway_light
+    state: 'on'
   action:
   - data: {}
     entity_id: light.doorway_light

@@ -1,10 +1,11 @@
 discovery:
   ignore:
     - apple_tv
+    - enigma2
+    - logitech_mediaserver
     - google_cast
     - yeelight
     - songpal
     - xiaomi_gw
     - igd
     - harmony
-    - homekit
