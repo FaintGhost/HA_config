@@ -1,10 +1,6 @@
 title: 智能家居管理系统
 views:
-  - panel: false
-    path: default_view
-    title: Home
-    icon: 'mdi:home'
-    badges: []
+  - badges: []
     cards:
       - cards:
           - entity: weather.jia
@@ -35,6 +31,13 @@ views:
                 type: sensor
             type: horizontal-stack
         type: vertical-stack
+      - artwork: cover
+        entity: media_player.srs_x99
+        hide:
+          controls: true
+          icon_state: false
+          power_state: false
+        type: 'custom:mini-media-player'
       - entities:
           - entity: sensor.germany_coronavirus_confirmed
           - entity: sensor.germany_coronavirus_current
@@ -85,11 +88,11 @@ views:
           - entity: switch.wake_on_lan
         show_header_toggle: false
         type: entities
-  - panel: true
-    path: networkmap
-    title: Networkmap
-    icon: 'mdi:chart-bubble'
-    badges: []
+    icon: 'mdi:home'
+    panel: false
+    path: default_view
+    title: Home
+  - badges: []
     cards:
       - css: |
           :host {
@@ -112,18 +115,19 @@ views:
         mqtt_base_topic: zigbee2mqtt
         node_size: 16
         type: 'custom:zigbee2mqtt-networkmap'
-  - panel: true
-    title: Node-RED
-    icon: 'mdi:sitemap'
-    badges: []
+    icon: 'mdi:chart-bubble'
+    panel: true
+    path: networkmap
+    title: Networkmap
+  - badges: []
     cards:
-      - type: iframe
+      - aspect_ratio: 100%
+        type: iframe
         url: 'https://nr.awyun.top'
-        aspect_ratio: 100%
-  - path: panel
-    title: PANEL
-    icon: 'mdi:server-network'
-    badges: []
+    icon: 'mdi:sitemap'
+    panel: true
+    title: Node-RED
+  - badges: []
     cards:
       - entities:
           - entity: input_boolean.zigbee_permit_join
@@ -150,3 +154,6 @@ views:
           - entity: sensor.zhuo_xia_cha_zuo_linkquality
           - entity: sensor.zou_lang_dong_zuo_linkquality
         type: glance
+    icon: 'mdi:server-network'
+    path: panel
+    title: PANEL
