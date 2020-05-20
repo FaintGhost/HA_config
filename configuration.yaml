@@ -7,8 +7,8 @@ homeassistant:
   time_zone: Europe/Berlin
   customize: !include_dir_merge_named customize
   packages: !include_dir_named integrations
-  internal_url: "http://192.168.1.2:8123"
-  external_url: "https://ha.awyun.top"
+  internal_url: !secret internal_url
+  external_url: !secret external_url
 
 automation: !include automations.yaml
 
