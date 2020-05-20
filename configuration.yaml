@@ -7,6 +7,8 @@ homeassistant:
   time_zone: Europe/Berlin
   customize: !include_dir_merge_named customize
   packages: !include_dir_named integrations
+  internal_url: "http://192.168.1.2:8123"
+  external_url: "https://ha.awyun.top"
 
 automation: !include automations.yaml
 
@@ -25,13 +27,6 @@ lovelace:
   #   type: module
 
 recorder:
-  # db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
-
-http:
-  base_url: !secret base_url
-  use_x_forwarded_for: true
-  trusted_proxies: 127.0.0.1
-
 hassio:
 config:
 map:
