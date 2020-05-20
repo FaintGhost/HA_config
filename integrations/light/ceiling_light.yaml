@@ -1,4 +1,4 @@
 light:
   - platform: switch
     name: Ceiling Light
-    entity_id: switch.shelly
+    entity_id: switch.0xec1bbdfffe863083_switch_l1

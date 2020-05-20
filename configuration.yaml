@@ -25,7 +25,7 @@ lovelace:
   #   type: module
 
 recorder:
-  db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
+  # db_url: mysql://homeassistant:69186918@core-mariadb/homeassistant?charset=utf8
 
 http:
   base_url: !secret base_url
