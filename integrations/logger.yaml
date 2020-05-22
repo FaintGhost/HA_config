@@ -3,3 +3,4 @@ logger:
   logs:
     homeassistant.components.mqtt: info
     homeassistant.helpers.entity: critical
+    homeassistant.components.binary_sensor: error

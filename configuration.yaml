@@ -31,3 +31,4 @@ hassio:
 config:
 map:
 system_health:
+mobile_app:
