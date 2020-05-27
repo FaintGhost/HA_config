@@ -16,6 +16,11 @@ homekit:
       - switch.wake_on_lan
       - switch.wall_switch_l1
       - switch.wall_switch_l2
+      - sensor.chu_fang_cha_zuo_temperature
+      - sensor.chuang_tou_cha_zuo_temperature
+      - sensor.di_xia_cha_zuo_temperature
+      - sensor.xi_yi_ji_cha_zuo_temperature
+      - sensor.zhuo_xia_cha_zuo_temperature
     exclude_domains:
       - automation
       - script
