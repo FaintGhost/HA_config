@@ -21,3 +21,4 @@
 secrets.yaml
 harmony_bedroom.conf
 home-assistant_v2.db-wal
+home-assistant_v2.db-shm
