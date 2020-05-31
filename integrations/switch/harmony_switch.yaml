@@ -1,0 +1,13 @@
+input_boolean:
+  hdmi_pc:
+    name: PC
+    icon: mdi:desktop-tower
+  hdmi_atv:
+    name: Apple TV
+    icon: mdi:apple
+  hdmi_ns:
+    name: Nintendo Switch
+    icon: mdi:nintendo-switch
+  hdmi_ps4:
+    name: PS4
+    icon: mdi:sony-playstation
