@@ -1,0 +1,52 @@
+fan:
+  - platform: template
+    fans:
+      my_fan:
+        value_template: "{{ states('input_boolean.status_fan_power') }}"
+        oscillating_template: "{{ states('input_select.osc') }}"
+        speed_template: "{{ states('input_text.status_fan_speed') }}"
+        speeds: ["1", "2", "3"]
+        turn_on:
+          - condition: state
+            entity_id: input_boolean.status_fan_power
+            state: "off"
+          - service: remote.send_command
+            data:
+              entity_id: remote.harmony
+              device: 69866819
+              command: PowerToggle
+          - service: input_boolean.turn_on
+            entity_id: input_boolean.status_fan_power
+        turn_off:
+          - service: remote.send_command
+            data:
+              entity_id: remote.harmony
+              device: 69866819
+              command: PowerToggle
+          - service: input_boolean.turn_off
+            entity_id: input_boolean.status_fan_power
+        set_oscillating:
+          - service: remote.send_command
+            data:
+              entity_id: remote.harmony
+              device: 69866819
+              command: swing
+          - service: input_boolean.toggle
+            entity_id: input_boolean.fan_osc
+        set_speed:
+          - service: python_script.fan_speed_control
+            data_template:
+              fan_speed: "{{ speed }}"
+          - service: input_text.set_value
+            data_template:
+              entity_id: input_text.status_fan_speed
+              value: "{{ speed }}"
+
+input_boolean:
+  status_fan_power:
+    name: Status Fan Power
+  fan_osc:
+    name: 摆风
+input_text:
+  status_fan_speed:
+    name: Status Fan Speed

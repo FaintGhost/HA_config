@@ -32,3 +32,4 @@ config:
 map:
 system_health:
 mobile_app:
+python_script:
