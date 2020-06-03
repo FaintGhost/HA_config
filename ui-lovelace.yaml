@@ -85,7 +85,6 @@ views:
           - entity: switch.zhuo_xia_cha_zuo_switch
           - entity: switch.di_xia_cha_zuo_switch
           - entity: switch.xi_yi_ji_cha_zuo_switch
-          - entity: switch.wake_on_lan
         show_header_toggle: false
         type: entities
     icon: 'mdi:home'
@@ -134,6 +133,8 @@ views:
           - entity: timer.zigbee_permit_join
           - entity: sensor.wang_guan_zhuang_tai
           - entity: script.homeassistant_restart
+          - entity: binary_sensor.pc_status
+          - entity: switch.pc_switch
         show_header_toggle: false
         title: 系统
         type: entities
@@ -157,3 +158,13 @@ views:
     icon: 'mdi:server-network'
     path: panel
     title: PANEL
+  - icon: 'mdi:monitor-dashboard'
+    panel: true
+    badges: []
+    cards:
+      - type: iframe
+        url: 'https://gl.awyun.top'
+        aspect_ratio: 100%
+custom_header:
+  compact_mode: true
+  header_css: 'background: #2c2c2e;'
