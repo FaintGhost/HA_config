@@ -4,3 +4,5 @@ logger:
     homeassistant.components.mqtt: info
     homeassistant.helpers.entity: critical
     homeassistant.components.binary_sensor: error
+    homeassistant.components.python_script: error
+    homeassistant.components.homekit.util: error
