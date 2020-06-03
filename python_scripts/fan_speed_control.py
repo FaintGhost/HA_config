@@ -15,8 +15,8 @@ if speed is not None:
         for i in range(loop):
             hass.services.call('remote', 'send_command', service_data, False)
             time.sleep(0.5)
-        else:
-            logger.warning(
-                '<fan_speed_control> Received fan speed is invalid ({})'.format(fan_speed))
-else:
-    logger.warning('<fan_speed_control> Received fan speed is invalid (None)')
+#         else:
+#             logger.warning(
+#                 '<fan_speed_control> Received fan speed is invalid ({})'.format(fan_speed))
+# else:
+#     logger.warning('<fan_speed_control> Received fan speed is invalid (None)')
