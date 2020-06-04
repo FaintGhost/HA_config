@@ -5,6 +5,14 @@ utility_meter:
   weekly_energy:
     source: sensor.power_consumed
     cycle: weekly
+    offset:
+      days: 4
+      hours: 0
+      minutes: 0
   monthly_energy:
     source: sensor.power_consumed
     cycle: monthly
+    offset:
+      days: 4
+      hours: 0
+      minutes: 0

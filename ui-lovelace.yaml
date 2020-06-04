@@ -1,3 +1,9 @@
+custom_header:
+  active_tab_color: var(--state-icon-active-color)
+  background: var(--app-header-background-color)
+  compact_mode: true
+  elements_color: var(--app-header-text-color)
+  tab_indicator_color: var(--state-icon-active-color)
 title: 智能家居管理系统
 views:
   - badges: []
@@ -15,18 +21,33 @@ views:
         type: entity
       - cards:
           - cards:
-              - entity: sensor.temp_humidity_sensor_temperature
-                graph: line
-                type: sensor
-              - entity: sensor.temp_humidity_sensor_humidity
-                graph: line
-                type: sensor
+              - color_thresholds:
+                  - color: '#307ffd'
+                    value: 20
+                  - color: '#008000'
+                    value: 25
+                  - color: '#e74c3c'
+                    value: 30
+                entities:
+                  - sensor.temp_humidity_sensor_temperature
+                hours_to_show: 168
+                points_per_hour: 0.25
+                type: 'custom:mini-graph-card'
+              - color_thresholds:
+                  - color: '#008000'
+                    value: 30
+                  - color: '#ff9900'
+                    value: 50
+                  - color: '#e74c3c'
+                    value: 70
+                entities:
+                  - sensor.temp_humidity_sensor_humidity
+                hours_to_show: 168
+                points_per_hour: 0.25
+                type: 'custom:mini-graph-card'
             type: horizontal-stack
           - cards:
               - entity: sensor.power_loaded
-                graph: line
-                type: sensor
-              - entity: sensor.cpu_temperature
                 graph: line
                 type: sensor
             type: horizontal-stack
@@ -39,11 +60,14 @@ views:
           power_state: false
         type: 'custom:mini-media-player'
       - entities:
-          - entity: sensor.germany_coronavirus_confirmed
           - entity: sensor.germany_coronavirus_current
-          - entity: sensor.germany_coronavirus_recovered
-          - entity: sensor.germany_coronavirus_deaths
-        type: glance
+            name: 现存
+          - sensor.germany_coronavirus_confirmed
+          - sensor.germany_coronavirus_deaths
+          - sensor.germany_coronavirus_recovered
+        hours_to_show: 168
+        name: 德国疫情
+        type: 'custom:mini-graph-card'
       - entities:
           - entity: light.ceiling_light
             tap_action:
@@ -87,6 +111,10 @@ views:
           - entity: switch.xi_yi_ji_cha_zuo_switch
         show_header_toggle: false
         type: entities
+      - entity: fan.my_fan
+        name: 风扇
+        theme: kibibit
+        type: entity
     icon: 'mdi:home'
     panel: false
     path: default_view
@@ -138,33 +166,23 @@ views:
         show_header_toggle: false
         title: 系统
         type: entities
+      - entity: sensor.uptime
+        type: entity
       - entities:
-          - entity: sensor.chu_fang_cha_zuo_linkquality
-          - entity: sensor.chu_fang_dong_zuo_linkquality
-          - entity: sensor.chu_fang_men_linkquality
-          - entity: sensor.chuang_tou_cha_zuo_linkquality
-          - entity: sensor.da_men_linkquality
-          - entity: sensor.di_xia_cha_zuo_linkquality
-          - entity: sensor.mo_fang_linkquality
-          - entity: sensor.wei_sheng_jian_dong_zuo_linkquality
-          - entity: sensor.temp_humidity_sensor_linkquality
-          - entity: sensor.wo_shi_dong_zuo_linkquality
-          - entity: sensor.wo_shi_men_linkquality
-          - entity: sensor.wu_xian_kai_guan_linkquality
-          - entity: sensor.xi_yi_ji_cha_zuo_linkquality
-          - entity: sensor.zhuo_xia_cha_zuo_linkquality
-          - entity: sensor.zou_lang_dong_zuo_linkquality
-        type: glance
+          - aggregate_func: max
+            color: null
+            entity: sensor.cpu_temperature
+            name: 最高
+          - aggregate_func: min
+            entity: sensor.cpu_temperature
+            name: 最低
+          - aggregate_func: avg
+            color: green
+            entity: sensor.cpu_temperature
+            name: 平均
+        hours_to_show: 24
+        name: CPU温度
+        type: 'custom:mini-graph-card'
     icon: 'mdi:server-network'
     path: panel
     title: PANEL
-  - icon: 'mdi:monitor-dashboard'
-    panel: true
-    badges: []
-    cards:
-      - type: iframe
-        url: 'https://gl.awyun.top'
-        aspect_ratio: 100%
-custom_header:
-  compact_mode: true
-  header_css: 'background: #2c2c2e;'
