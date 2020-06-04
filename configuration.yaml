@@ -33,3 +33,4 @@ map:
 system_health:
 mobile_app:
 python_script:
+websocket_api:
