@@ -1,13 +1,20 @@
-
 # Example configuration.yaml entry
 sensor:
   - platform: template
     sensors:
       power_loaded:
         friendly_name: "总功率"
-        unit_of_measurement: 'W'
+        unit_of_measurement: "W"
         value_template: "{{ (state_attr('sensor.chu_fang_cha_zuo_power', 'power') + state_attr('sensor.chuang_tou_cha_zuo_power', 'power') + state_attr('sensor.di_xia_cha_zuo_power', 'power') + state_attr('sensor.xi_yi_ji_cha_zuo_power', 'power') + state_attr('sensor.zhuo_xia_cha_zuo_power', 'power')) | int }}"
       power_consumed:
         friendly_name: "总耗电量"
-        unit_of_measurement: 'kWh'
+        unit_of_measurement: "kWh"
         value_template: "{{ (state_attr('sensor.chu_fang_cha_zuo_power', 'consumption') + state_attr('sensor.chuang_tou_cha_zuo_power', 'consumption') + state_attr('sensor.di_xia_cha_zuo_power', 'consumption') + state_attr('sensor.xi_yi_ji_cha_zuo_power', 'consumption') + state_attr('sensor.zhuo_xia_cha_zuo_power', 'consumption')) | int }}"
+      power_consumed_daily:
+        friendly_name: "日耗电量"
+        unit_of_measurement: "kWh"
+        value_template: "{{ states('sensor.daily_energy')|float }}"
+      power_consumed_monthly:
+        friendly_name: "月耗电量"
+        unit_of_measurement: "kWh"
+        value_template: "{{ states('sensor.monthly_energy')|float }}"
