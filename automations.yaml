@@ -75,3 +75,33 @@
         Supported: {{trigger.payload_json.meta.supported}}'
       title: 新设备已添加
     service: persistent_notification.create
+- id: '1591314123622'
+  alias: 【夜间】启动切换主题
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: not
+    conditions:
+    - after: sunset
+      before: sunrise
+      condition: sun
+  action:
+  - data:
+      name: Google Dark Theme
+    service: frontend.set_theme
+- id: '1591314321755'
+  alias: 【白天】启动切换主题
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  action:
+  - data:
+      name: Google Light Theme
+    service: frontend.set_theme
