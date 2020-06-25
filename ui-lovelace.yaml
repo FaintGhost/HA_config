@@ -47,11 +47,26 @@ views:
                 type: 'custom:mini-graph-card'
             type: horizontal-stack
           - cards:
-              - entity: sensor.power_loaded
-                graph: line
-                type: sensor
+              - entities:
+                  - aggregate_func: max
+                    color: null
+                    entity: sensor.power_loaded
+                    name: 最高
+                  - aggregate_func: min
+                    entity: sensor.power_loaded
+                    name: 最低
+                  - aggregate_func: avg
+                    color: green
+                    entity: sensor.power_loaded
+                    name: 平均
+                hours_to_show: 24
+                name: 功率
+                type: 'custom:mini-graph-card'
             type: horizontal-stack
         type: vertical-stack
+      - entity: fan.my_fan
+        name: 风扇
+        type: entity
       - artwork: cover
         entity: media_player.srs_x99
         hide:
@@ -111,10 +126,6 @@ views:
           - entity: switch.xi_yi_ji_cha_zuo_switch
         show_header_toggle: false
         type: entities
-      - entity: fan.my_fan
-        name: 风扇
-        theme: kibibit
-        type: entity
     icon: 'mdi:home'
     panel: false
     path: default_view
@@ -156,6 +167,8 @@ views:
     title: Node-RED
   - badges: []
     cards:
+      - entity: sensor.uptime
+        type: entity
       - entities:
           - entity: input_boolean.zigbee_permit_join
           - entity: timer.zigbee_permit_join
@@ -166,8 +179,6 @@ views:
         show_header_toggle: false
         title: 系统
         type: entities
-      - entity: sensor.uptime
-        type: entity
       - entities:
           - aggregate_func: max
             color: null
@@ -182,6 +193,12 @@ views:
             name: 平均
         hours_to_show: 24
         name: CPU温度
+        type: 'custom:mini-graph-card'
+      - entities:
+          - entity: sensor.weekly_energy
+        name: ENERGY CONSUMPTION
+        show:
+          graph: bar
         type: 'custom:mini-graph-card'
     icon: 'mdi:server-network'
     path: panel
