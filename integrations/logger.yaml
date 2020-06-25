@@ -6,3 +6,4 @@ logger:
     homeassistant.components.binary_sensor: error
     homeassistant.components.python_script: error
     homeassistant.components.homekit.util: error
+    homeassistant.helpers.service: error
