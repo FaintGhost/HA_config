@@ -35,3 +35,5 @@ media_player.srs_x99:
 script.homeassistant_restart:
   friendly_name: 重新启动
   icon: mdi:restart
+fan.my_fan:
+  friendly_name: 风扇

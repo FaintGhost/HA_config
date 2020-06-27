@@ -1,0 +1,39 @@
+google_assistant:
+  project_id: hassio-c6321
+  service_account: !include SERVICE_ACCOUNT.JSON
+  report_state: true
+  exposed_domains:
+    - switch
+    - light
+    - sensor
+    - fan
+    - media_player
+  entity_config:
+    binary_sensor.da_men_contact:
+      expose: true
+    sensor.chu_fang_cha_zuo_temperature:
+      expose: false
+    sensor.chuang_tou_cha_zuo_temperature:
+      expose: false
+    sensor.di_xia_cha_zuo_temperature:
+      expose: false
+    sensor.xi_yi_ji_cha_zuo_temperature:
+      expose: false
+    sensor.zhuo_xia_cha_zuo_temperature:
+      expose: false
+    switch.adguard_filtering:
+      expose: false
+    switch.adguard_parental_control:
+      expose: false
+    switch.adguard_protection:
+      expose: false
+    switch.adguard_safe_browsing:
+      expose: false
+    switch.adguard_safe_search:
+      expose: false
+    switch.wake_on_lan:
+      expose: false
+    switch.wall_switch_l1:
+      expose: false
+    switch.wall_switch_l2:
+      expose: false
