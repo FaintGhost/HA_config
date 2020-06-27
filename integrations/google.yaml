@@ -1,5 +1,5 @@
 google_assistant:
-  project_id: hassio-c6321
+  project_id: hassio-281601
   service_account: !include SERVICE_ACCOUNT.JSON
   report_state: true
   exposed_domains:
@@ -7,9 +7,20 @@ google_assistant:
     - light
     - sensor
     - fan
-    - media_player
   entity_config:
     binary_sensor.da_men_contact:
+      expose: true
+    binary_sensor.wo_shi_men_contact:
+      expose: true
+    binary_sensor.chu_fang_men_contact:
+      expose: true
+    binary_sensor.wei_sheng_jian_dong_zuo_occupancy:
+      expose: true
+    binary_sensor.zou_lang_dong_zuo_occupancy:
+      expose: true
+    binary_sensor.wo_shi_dong_zuo_occupancy:
+      expose: true
+    binary_sensor.chu_fang_dong_zuo_occupancy:
       expose: true
     sensor.chu_fang_cha_zuo_temperature:
       expose: false
