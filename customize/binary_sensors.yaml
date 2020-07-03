@@ -13,3 +13,5 @@ binary_sensor.zou_lang_dong_zuo_occupancy:
   friendly_name: 走廊动作
 binary_sensor.wo_shi_dong_zuo_occupancy:
   friendly_name: 卧室动作
+binary_sensor.ping_binary_sensor:
+  friendly_name: 台式机状态

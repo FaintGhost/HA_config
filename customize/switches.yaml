@@ -27,7 +27,7 @@ switch.adguard_safe_browsing:
 switch.adguard_safe_search:
   friendly_name: AdGuard 安全搜索
 switch.pc_switch:
-  friendly_name: 电脑
+  friendly_name: 台式机
   icon: mdi:desktop-tower
   assumed_state: false
 media_player.srs_x99:

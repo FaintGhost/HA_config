@@ -124,7 +124,6 @@ views:
           - entity: switch.chuang_tou_cha_zuo_switch
           - entity: switch.zhuo_xia_cha_zuo_switch
           - entity: switch.di_xia_cha_zuo_switch
-          - entity: switch.xi_yi_ji_cha_zuo_switch
         show_header_toggle: false
         type: entities
     icon: 'mdi:home'
@@ -175,7 +174,7 @@ views:
           - entity: timer.zigbee_permit_join
           - entity: sensor.wang_guan_zhuang_tai
           - entity: script.homeassistant_restart
-          - entity: binary_sensor.pc_status
+          - entity: binary_sensor.ping_binary_sensor
           - entity: switch.pc_switch
         show_header_toggle: false
         title: 系统

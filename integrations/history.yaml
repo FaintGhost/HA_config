@@ -7,6 +7,7 @@ history:
       - script
       - timer
       - remote
+      - input_boolean
     entities:
       - sensor.adguard_parental_control_blocked
       - sensor.adguard_safe_browsing_blocked
@@ -27,3 +28,10 @@ history:
       - sensor.zigbee2mqtt_networkmap
       - binary_sensor.night_light_nightlight
       - binary_sensor.0x7cb03eaa0a05a30f_update_available
+      - binary_sensor.0x7cb03eaa0a00c711_update_available
+      - sensor.wall_linkquality
+      - switch.wall_switch_l1
+      - switch.wall_switch_l2
+      - switch.wake_on_lan
+      - sensor.mo_fang_action
+      - sensor.wu_xian_kai_guan_click
