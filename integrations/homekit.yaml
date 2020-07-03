@@ -25,7 +25,7 @@ homekit:
       - device_tracker.zhong_ye_san_jiu
       - input_boolean.fan_osc
       - input_boolean.status_fan_power
-      - binary_sensor.pc_status
+      - binary_sensor.ping_binary_sensor
       - switch.xi_yi_ji_cha_zuo_switch
     exclude_domains:
       - automation
