@@ -105,7 +105,10 @@ views:
           - entity: sensor.adguard_average_processing_speed
         show_header_toggle: false
         type: entities
-      - entities:
+      - card:
+          title: 激活的传感器
+          type: glance
+        entities:
           - entity: binary_sensor.da_men_contact
           - entity: binary_sensor.wo_shi_men_contact
           - entity: binary_sensor.chu_fang_men_contact
@@ -113,11 +116,9 @@ views:
           - entity: binary_sensor.zou_lang_dong_zuo_occupancy
           - entity: binary_sensor.wo_shi_dong_zuo_occupancy
           - entity: binary_sensor.chu_fang_dong_zuo_occupancy
-        show_icon: true
-        show_name: true
-        show_state: true
-        title: 传感器
-        type: glance
+        state_filter:
+          - 'on'
+        type: entity-filter
       - entities:
           - entity: switch.chu_fang_cha_zuo_switch
           - entity: switch.chuang_tou_cha_zuo_switch

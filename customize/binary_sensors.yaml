@@ -6,9 +6,9 @@ binary_sensor.wo_shi_men_contact:
 binary_sensor.da_men_contact:
   friendly_name: 大门
 binary_sensor.wei_sheng_jian_dong_zuo_occupancy:
-  friendly_name: 卫生间动作
-binary_sensor.chu_fang_dong_zuo_occupancy:
   friendly_name: 厨房动作
+binary_sensor.chu_fang_dong_zuo_occupancy:
+  friendly_name: 厨房动作_deprecated
 binary_sensor.zou_lang_dong_zuo_occupancy:
   friendly_name: 走廊动作
 binary_sensor.wo_shi_dong_zuo_occupancy:
