@@ -27,6 +27,7 @@ homekit:
       - input_boolean.status_fan_power
       - binary_sensor.ping_binary_sensor
       - switch.xi_yi_ji_cha_zuo_switch
+      - switch.oscillate
     exclude_domains:
       - automation
       - script

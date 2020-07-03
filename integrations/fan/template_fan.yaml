@@ -56,3 +56,20 @@ input_select:
     options:
       - 'True'
       - 'False'
+
+switch:
+  - platform: template
+    switches:
+      oscillate:
+        friendly_name: 摇头
+        value_template: "{{ is_state('input_select.status_fan_osc', 'True') }}"            
+        turn_on:
+          service: fan.oscillate
+          data:
+            entity_id: fan.my_fan
+            oscillating: true
+        turn_off:
+          service: fan.oscillate
+          data:
+            entity_id: fan.my_fan
+            oscillating: False

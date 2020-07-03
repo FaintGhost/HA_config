@@ -64,9 +64,51 @@ views:
                 type: 'custom:mini-graph-card'
             type: horizontal-stack
         type: vertical-stack
-      - entity: fan.my_fan
-        name: 风扇
-        type: entity
+      - entities:
+          - entity: fan.my_fan
+            tap_action:
+              action: call-service
+              service: fan.toggle
+              service_data:
+                entity_id: fan.my_fan
+          - entity: switch.oscillate
+            icon: 'mdi:rotate-3d-variant'
+            tap_action:
+              action: call-service
+              service: switch.toggle
+              service_data:
+                entity_id: switch.oscillate
+          - entity: zone.home
+            name: null
+            icon: 'mdi:numeric-1'
+            tap_action:
+              action: call-service
+              service: fan.set_speed
+              service_data:
+                entity_id: fan.my_fan
+                speed: 1
+          - entity: zone.home
+            name: 档位
+            icon: 'mdi:numeric-2'
+            tap_action:
+              action: call-service
+              service: fan.set_speed
+              service_data:
+                entity_id: fan.my_fan
+                speed: 2
+          - entity: zone.home
+            name: null
+            icon: 'mdi:numeric-3'
+            tap_action:
+              action: call-service
+              service: fan.set_speed
+              service_data:
+                entity_id: fan.my_fan
+                speed: 3
+        type: glance
+        show_icon: true
+        show_state: false
+        show_name: true
       - artwork: cover
         entity: media_player.srs_x99
         hide:
