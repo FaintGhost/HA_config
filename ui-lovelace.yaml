@@ -79,8 +79,8 @@ views:
               service_data:
                 entity_id: switch.oscillate
           - entity: zone.home
-            name: null
             icon: 'mdi:numeric-1'
+            name: null
             tap_action:
               action: call-service
               service: fan.set_speed
@@ -88,8 +88,8 @@ views:
                 entity_id: fan.my_fan
                 speed: 1
           - entity: zone.home
-            name: 档位
             icon: 'mdi:numeric-2'
+            name: 档位
             tap_action:
               action: call-service
               service: fan.set_speed
@@ -97,18 +97,18 @@ views:
                 entity_id: fan.my_fan
                 speed: 2
           - entity: zone.home
-            name: null
             icon: 'mdi:numeric-3'
+            name: null
             tap_action:
               action: call-service
               service: fan.set_speed
               service_data:
                 entity_id: fan.my_fan
                 speed: 3
-        type: glance
         show_icon: true
-        show_state: false
         show_name: true
+        show_state: false
+        type: glance
       - artwork: cover
         entity: media_player.srs_x99
         hide:
@@ -161,6 +161,7 @@ views:
         state_filter:
           - 'on'
         type: entity-filter
+        show_empty: false
       - entities:
           - entity: switch.chu_fang_cha_zuo_switch
           - entity: switch.chuang_tou_cha_zuo_switch
