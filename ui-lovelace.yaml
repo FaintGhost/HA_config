@@ -71,14 +71,14 @@ views:
               service: fan.toggle
               service_data:
                 entity_id: fan.my_fan
-          - entity: switch.oscillate
+          - entity: switch.fan_oscillate
             icon: 'mdi:rotate-3d-variant'
             tap_action:
               action: call-service
               service: switch.toggle
               service_data:
-                entity_id: switch.oscillate
-          - entity: zone.home
+                entity_id: switch.fan_oscillate
+          - entity: switch.fan_speed_one
             icon: 'mdi:numeric-1'
             name: null
             tap_action:
@@ -87,7 +87,7 @@ views:
               service_data:
                 entity_id: fan.my_fan
                 speed: 1
-          - entity: zone.home
+          - entity: switch.fan_speed_two
             icon: 'mdi:numeric-2'
             name: 档位
             tap_action:
@@ -96,7 +96,7 @@ views:
               service_data:
                 entity_id: fan.my_fan
                 speed: 2
-          - entity: zone.home
+          - entity: switch.fan_speed_three
             icon: 'mdi:numeric-3'
             name: null
             tap_action:
@@ -158,10 +158,10 @@ views:
           - entity: binary_sensor.zou_lang_dong_zuo_occupancy
           - entity: binary_sensor.wo_shi_dong_zuo_occupancy
           - entity: binary_sensor.chu_fang_dong_zuo_occupancy
+        show_empty: false
         state_filter:
           - 'on'
         type: entity-filter
-        show_empty: false
       - entities:
           - entity: switch.chu_fang_cha_zuo_switch
           - entity: switch.chuang_tou_cha_zuo_switch

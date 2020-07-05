@@ -60,7 +60,7 @@ input_select:
 switch:
   - platform: template
     switches:
-      oscillate:
+      fan_oscillate:
         friendly_name: 摇头
         value_template: "{{ is_state('input_select.status_fan_osc', 'True') }}"            
         turn_on:
@@ -73,3 +73,42 @@ switch:
           data:
             entity_id: fan.my_fan
             oscillating: False
+      fan_speed_one:
+        friendly_name: 1档
+        value_template: "{{ is_state('input_text.status_fan_speed', '1') }}"            
+        turn_on:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 1
+        turn_off:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 1
+      fan_speed_two:
+        friendly_name: 2档
+        value_template: "{{ is_state('input_text.status_fan_speed', '2') }}"            
+        turn_on:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 2
+        turn_off:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 2
+      fan_speed_three:
+        friendly_name: 3档
+        value_template: "{{ is_state('input_text.status_fan_speed', '3') }}"            
+        turn_on:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 3
+        turn_off:
+          service: fan.set_speed
+          data:
+            entity_id: fan.my_fan
+            speed: 3
