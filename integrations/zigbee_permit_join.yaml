@@ -17,6 +17,6 @@ sensor:
     value_template: >-
       {% if value | string == 'online' %}
         在线
-      {% else %}
+      {% elif value | string == 'unavailable' %}
         离线
       {% endif %}
