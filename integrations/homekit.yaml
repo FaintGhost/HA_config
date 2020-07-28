@@ -2,35 +2,23 @@ homekit:
   filter:
     exclude_entities:
       - switch.xiaomi_miio_switch
-      - sensor.chu_fang_dong_zuo_illuminance
-      - sensor.zou_lang_dong_zuo_illuminance
       - binary_sensor.remote_ui
       - sensor.cpu_temperature
       - binary_sensor.night_light_nightlight
-      - switch.adguard_filtering
-      - switch.adguard_parental_control
-      - switch.adguard_safe_search
-      - switch.adguard_safe_browsing
-      - input_boolean.zigbee_permit_join
       - binary_sensor.0x7cb03eaa0a00c711_update_available
       - switch.wake_on_lan
-      - switch.wall_switch_l1
-      - switch.wall_switch_l2
-      - sensor.chu_fang_cha_zuo_temperature
-      - sensor.chuang_tou_cha_zuo_temperature
-      - sensor.di_xia_cha_zuo_temperature
-      - sensor.xi_yi_ji_cha_zuo_temperature
-      - sensor.zhuo_xia_cha_zuo_temperature
-      - device_tracker.zhong_ye_yi_hua
-      - device_tracker.zhong_ye_san_jiu
-      - input_boolean.fan_osc
-      - input_boolean.status_fan_power
       - binary_sensor.ping_binary_sensor
       - switch.xi_yi_ji_cha_zuo_switch
-      - switch.fan_oscillate
-      - switch.fan_speed_one
-      - switch.fan_speed_two
-      - switch.fan_speed_three
+      - binary_sensor.chu_fang_dong_zuo_occupancy
+    exclude_entity_globs:
+      - switch.wall_*
+      - switch.fan_*
+      - switch.adguard_*
+      - sensor.*_cha_zuo_temperature
+      - sensor.*_illuminance
+      - device_tracker.*
+      - person.*
+      - input_boolean.*
     exclude_domains:
       - automation
       - script
