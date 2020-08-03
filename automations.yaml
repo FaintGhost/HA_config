@@ -89,8 +89,9 @@
       condition: sun
   action:
   - data:
-      name: Google Dark Theme
+      name: iOS Dark Mode
     service: frontend.set_theme
+  mode: single
 - id: '1591314321755'
   alias: 【白天】启动切换主题
   description: ''
@@ -103,5 +104,6 @@
     condition: sun
   action:
   - data:
-      name: Google Light Theme
+      name: iOS Light Mode
     service: frontend.set_theme
+  mode: single
