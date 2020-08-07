@@ -89,7 +89,7 @@
       condition: sun
   action:
   - data:
-      name: iOS Dark Mode
+      name: Google Dark Theme
     service: frontend.set_theme
   mode: single
 - id: '1591314321755'
@@ -104,6 +104,6 @@
     condition: sun
   action:
   - data:
-      name: iOS Light Mode
+      name: Google Light Theme
     service: frontend.set_theme
   mode: single

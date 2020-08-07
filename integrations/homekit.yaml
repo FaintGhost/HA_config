@@ -5,7 +5,6 @@ homekit:
       - binary_sensor.remote_ui
       - sensor.cpu_temperature
       - binary_sensor.night_light_nightlight
-      - binary_sensor.0x7cb03eaa0a00c711_update_available
       - switch.wake_on_lan
       - binary_sensor.ping_binary_sensor
       - switch.xi_yi_ji_cha_zuo_switch
@@ -16,6 +15,7 @@ homekit:
       - switch.adguard_*
       - sensor.*_cha_zuo_temperature
       - sensor.*_illuminance
+      - binary_sensor.*_update_available
       - device_tracker.*
       - person.*
       - input_boolean.*
