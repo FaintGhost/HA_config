@@ -1,4 +1,4 @@
-# binary sensors 
+# binary sensors
 binary_sensor.chu_fang_men_contact:
   friendly_name: 厨房门
 binary_sensor.wo_shi_men_contact:
@@ -13,5 +13,5 @@ binary_sensor.zou_lang_dong_zuo_occupancy:
   friendly_name: 走廊动作
 binary_sensor.wo_shi_dong_zuo_occupancy:
   friendly_name: 卧室动作
-binary_sensor.ping_binary_sensor:
+binary_sensor.ping_192_168_1_23:
   friendly_name: 台式机状态
