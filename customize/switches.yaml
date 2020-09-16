@@ -1,21 +1,21 @@
 # switches
-switch.chu_fang_cha_zuo_switch:
+switch.kitchen_socket:
   friendly_name: 厨房插座
   icon: mdi:power-socket-jp
-switch.di_xia_cha_zuo_switch:
+switch.floor_socket:
   friendly_name: 地下插座
   icon: mdi:power-socket-jp
-switch.zhuo_xia_cha_zuo_switch:
+switch.desk_socket:
   friendly_name: 桌下插座
   icon: mdi:power-socket-jp
-switch.xi_yi_ji_cha_zuo_switch:
-  friendly_name: 洗衣机插座
-  icon: mdi:power-socket-jp
-switch.chuang_tou_cha_zuo_switch:
+# switch.xi_yi_ji_cha_zuo_switch:
+#   friendly_name: 洗衣机插座
+#   icon: mdi:power-socket-jp
+switch.bedside_socket:
   friendly_name: 床头插座
   icon: mdi:power-socket-jp
-switch.shelly:
-  friendly_name: 墙壁开关
+# switch.shelly:
+#   friendly_name: 墙壁开关
 switch.adguard_protection:
   friendly_name: AdGuard 保护
 switch.adguard_filtering:

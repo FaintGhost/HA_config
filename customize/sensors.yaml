@@ -1,10 +1,10 @@
 sensor.chu_fang_dong_zuo_illuminance:
   friendly_name: 厨房亮度
-sensor.zou_lang_dong_zuo_illuminance:
+sensor.doorway_motion_illuminance:
   friendly_name: 走廊亮度
-sensor.temp_humidity_sensor_temperature:
+sensor.temperature:
   friendly_name: 卧室温度
-sensor.temp_humidity_sensor_humidity:
+sensor.humidity:
   friendly_name: 卧室湿度
 sensor.cpu_temperature:
   friendly_name: CPU温度
@@ -38,7 +38,7 @@ sensor.germany_coronavirus_deaths:
   unit_of_measurement: 人
 sensor.0x00158d0002564da3_action:
   friendly_name: 魔方控制器
-sensor.0x00158d0001563f1a_click:
+sensor.wireless_click:
   friendly_name: 无线开关
 timer.zigbee_permit_join:
   friendly_name: 剩余时间

@@ -1,17 +1,17 @@
 # binary sensors
-binary_sensor.chu_fang_men_contact:
+binary_sensor.kitchen_door:
   friendly_name: 厨房门
-binary_sensor.wo_shi_men_contact:
+binary_sensor.bedroom_door:
   friendly_name: 卧室门
-binary_sensor.da_men_contact:
+binary_sensor.home_door:
   friendly_name: 大门
-binary_sensor.wei_sheng_jian_dong_zuo_occupancy:
+binary_sensor.kitchen_motion:
   friendly_name: 厨房动作
 binary_sensor.chu_fang_dong_zuo_occupancy:
   friendly_name: 厨房动作_deprecated
-binary_sensor.zou_lang_dong_zuo_occupancy:
+binary_sensor.doorway_motion:
   friendly_name: 走廊动作
-binary_sensor.wo_shi_dong_zuo_occupancy:
+binary_sensor.bedroom_motion:
   friendly_name: 卧室动作
 binary_sensor.ping_192_168_1_23:
   friendly_name: 台式机状态

@@ -1,4 +1,4 @@
 light:
   - platform: switch
     name: Ceiling Light
-    entity_id: switch.wall_switch_l1
+    entity_id: switch.ceiling_switch_l1
