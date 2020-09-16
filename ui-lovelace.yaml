@@ -1,8 +1,8 @@
 custom_header:
-  compact_mode: true
-  background: var(--app-header-background-color)
-  elements_color: var(--app-header-text-color)
   active_tab_color: var(--state-icon-active-color)
+  background: var(--app-header-background-color)
+  compact_mode: true
+  elements_color: var(--app-header-text-color)
   tab_indicator_color: var(--state-icon-active-color)
 title: 智能家居管理系统
 views:
@@ -22,29 +22,29 @@ views:
       - cards:
           - cards:
               - color_thresholds:
-                  - color: '#307ffd'
+                  - color: "#307ffd"
                     value: 20
-                  - color: '#008000'
+                  - color: "#008000"
                     value: 25
-                  - color: '#e74c3c'
+                  - color: "#e74c3c"
                     value: 30
                 entities:
-                  - sensor.temp_humidity_sensor_temperature
+                  - sensor.temperature
                 hours_to_show: 168
                 points_per_hour: 0.25
-                type: 'custom:mini-graph-card'
+                type: "custom:mini-graph-card"
               - color_thresholds:
-                  - color: '#008000'
+                  - color: "#008000"
                     value: 30
-                  - color: '#ff9900'
+                  - color: "#ff9900"
                     value: 50
-                  - color: '#e74c3c'
+                  - color: "#e74c3c"
                     value: 70
                 entities:
-                  - sensor.temp_humidity_sensor_humidity
+                  - sensor.humidity
                 hours_to_show: 168
                 points_per_hour: 0.25
-                type: 'custom:mini-graph-card'
+                type: "custom:mini-graph-card"
             type: horizontal-stack
           - cards:
               - entities:
@@ -61,70 +61,67 @@ views:
                     name: 平均
                 hours_to_show: 24
                 name: 功率
-                type: 'custom:mini-graph-card'
+                type: "custom:mini-graph-card"
             type: horizontal-stack
         type: vertical-stack
-      - entities:
-          - entity: fan.my_fan
-            tap_action:
-              action: call-service
-              service: fan.toggle
-              service_data:
-                entity_id: fan.my_fan
-          - entity: switch.fan_oscillate
-            icon: 'mdi:rotate-3d-variant'
-            tap_action:
-              action: call-service
-              service: switch.toggle
-              service_data:
-                entity_id: switch.fan_oscillate
-          - entity: switch.fan_speed_one
-            icon: 'mdi:numeric-1'
-            name: null
-            tap_action:
-              action: call-service
-              service: fan.set_speed
-              service_data:
-                entity_id: fan.my_fan
-                speed: 1
-          - entity: switch.fan_speed_two
-            icon: 'mdi:numeric-2'
-            name: 档位
-            tap_action:
-              action: call-service
-              service: fan.set_speed
-              service_data:
-                entity_id: fan.my_fan
-                speed: 2
-          - entity: switch.fan_speed_three
-            icon: 'mdi:numeric-3'
-            name: null
-            tap_action:
-              action: call-service
-              service: fan.set_speed
-              service_data:
-                entity_id: fan.my_fan
-                speed: 3
-        show_icon: true
-        show_name: true
-        show_state: false
-        type: glance
+      # - entities:
+      #     - entity: fan.my_fan
+      #       tap_action:
+      #         action: call-service
+      #         service: fan.toggle
+      #         service_data:
+      #           entity_id: fan.my_fan
+      #     - entity: switch.fan_oscillate
+      #       icon: "mdi:rotate-3d-variant"
+      #       tap_action:
+      #         action: call-service
+      #         service: switch.toggle
+      #         service_data:
+      #           entity_id: switch.fan_oscillate
+      #     - entity: switch.fan_speed_one
+      #       icon: "mdi:numeric-1"
+      #       name: null
+      #       tap_action:
+      #         action: call-service
+      #         service: fan.set_speed
+      #         service_data:
+      #           entity_id: fan.my_fan
+      #           speed: 1
+      #     - entity: switch.fan_speed_two
+      #       icon: "mdi:numeric-2"
+      #       name: 档位
+      #       tap_action:
+      #         action: call-service
+      #         service: fan.set_speed
+      #         service_data:
+      #           entity_id: fan.my_fan
+      #           speed: 2
+      #     - entity: switch.fan_speed_three
+      #       icon: "mdi:numeric-3"
+      #       name: null
+      #       tap_action:
+      #         action: call-service
+      #         service: fan.set_speed
+      #         service_data:
+      #           entity_id: fan.my_fan
+      #           speed: 3
+      #   show_icon: true
+      #   show_name: true
+      #   show_state: false
+      #   type: glance
       - artwork: cover
         entity: media_player.srs_x99
         hide:
           controls: true
           icon_state: false
           power_state: false
-        type: 'custom:mini-media-player'
+        type: "custom:mini-media-player"
       - entities:
           - entity: sensor.germany_coronavirus_current
             name: 现存
-          - sensor.germany_coronavirus_confirmed
-          - sensor.germany_coronavirus_deaths
-          - sensor.germany_coronavirus_recovered
         hours_to_show: 168
         name: 德国疫情
-        type: 'custom:mini-graph-card'
+        type: "custom:mini-graph-card"
       - entities:
           - entity: light.ceiling_light
             tap_action:
@@ -132,7 +129,7 @@ views:
           - entity: light.doorway_light
             tap_action:
               action: toggle
-          - entity: light.0x7cb03eaa0a00c711_light
+          - entity: light.toilet_light
             tap_action:
               action: toggle
           - entity: light.kitchen_light
@@ -151,25 +148,24 @@ views:
           title: 激活的传感器
           type: glance
         entities:
-          - entity: binary_sensor.da_men_contact
-          - entity: binary_sensor.wo_shi_men_contact
-          - entity: binary_sensor.chu_fang_men_contact
-          - entity: binary_sensor.wei_sheng_jian_dong_zuo_occupancy
-          - entity: binary_sensor.zou_lang_dong_zuo_occupancy
-          - entity: binary_sensor.wo_shi_dong_zuo_occupancy
-          - entity: binary_sensor.chu_fang_dong_zuo_occupancy
+          - entity: binary_sensor.home_door
+          - entity: binary_sensor.bedroom_door
+          - entity: binary_sensor.kitchen_door
+          - entity: binary_sensor.doorway_motion
+          - entity: binary_sensor.bedroom_motion
+          - entity: binary_sensor.kitchen_motion
         show_empty: false
         state_filter:
-          - 'on'
+          - "on"
         type: entity-filter
       - entities:
-          - entity: switch.chu_fang_cha_zuo_switch
-          - entity: switch.chuang_tou_cha_zuo_switch
-          - entity: switch.zhuo_xia_cha_zuo_switch
-          - entity: switch.di_xia_cha_zuo_switch
+          - entity: switch.kitchen_socket
+          - entity: switch.bedside_socket
+          - entity: switch.desk_socket
+          - entity: switch.floor_socket
         show_header_toggle: false
         type: entities
-    icon: 'mdi:home'
+    icon: "mdi:home"
     panel: false
     path: default_view
     title: Home
@@ -195,8 +191,8 @@ views:
         link_width: 2
         mqtt_base_topic: zigbee2mqtt
         node_size: 16
-        type: 'custom:zigbee2mqtt-networkmap'
-    icon: 'mdi:chart-bubble'
+        type: "custom:zigbee2mqtt-networkmap"
+    icon: "mdi:chart-bubble"
     panel: true
     path: networkmap
     title: Networkmap
@@ -204,8 +200,8 @@ views:
     cards:
       - aspect_ratio: 100%
         type: iframe
-        url: 'https://nr.awyun.top'
-    icon: 'mdi:sitemap'
+        url: "https://nr.awyun.top"
+    icon: "mdi:sitemap"
     panel: true
     title: Node-RED
   - badges: []
@@ -217,7 +213,7 @@ views:
           - entity: timer.zigbee_permit_join
           - entity: sensor.wang_guan_zhuang_tai
           - entity: script.homeassistant_restart
-          - entity: binary_sensor.ping_binary_sensor
+          - entity: binary_sensor.ping_192_168_1_23
           - entity: switch.pc_switch
         show_header_toggle: false
         title: 系统
@@ -236,13 +232,13 @@ views:
             name: 平均
         hours_to_show: 24
         name: CPU温度
-        type: 'custom:mini-graph-card'
+        type: "custom:mini-graph-card"
       - entities:
           - entity: sensor.weekly_energy
         name: ENERGY CONSUMPTION
         show:
           graph: bar
-        type: 'custom:mini-graph-card'
-    icon: 'mdi:server-network'
+        type: "custom:mini-graph-card"
+    icon: "mdi:server-network"
     path: panel
     title: PANEL
