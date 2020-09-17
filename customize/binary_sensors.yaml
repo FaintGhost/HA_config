@@ -7,8 +7,6 @@ binary_sensor.home_door:
   friendly_name: 大门
 binary_sensor.kitchen_motion:
   friendly_name: 厨房动作
-binary_sensor.chu_fang_dong_zuo_occupancy:
-  friendly_name: 厨房动作_deprecated
 binary_sensor.doorway_motion:
   friendly_name: 走廊动作
 binary_sensor.bedroom_motion:

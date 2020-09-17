@@ -9,16 +9,18 @@ homekit:
       - binary_sensor.ping_binary_sensor
       - switch.xi_yi_ji_cha_zuo_switch
       - binary_sensor.chu_fang_dong_zuo_occupancy
+      - binary_sensor.ping_192_168_1_23
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*
       - switch.adguard_*
-      - sensor.*_cha_zuo_temperature
+      - sensor.*_socket_temperature
       - sensor.*_illuminance
       - binary_sensor.*_update_available
       - device_tracker.*
       - person.*
       - input_boolean.*
+      - switch.ceiling_switch_*
     exclude_domains:
       - automation
       - script
