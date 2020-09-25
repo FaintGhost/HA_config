@@ -44,3 +44,5 @@ timer.zigbee_permit_join:
   friendly_name: 剩余时间
 sensor.wang_guan_zhuang_tai:
   friendly_name: 网关状态
+sensor.uptime:
+  friendly_name: 启动时间
