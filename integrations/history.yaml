@@ -24,6 +24,9 @@ history:
       - switch.ceiling_switch_l1
       - switch.ceiling_switch_l2
       - switch.wake_on_lan
+      - sensor.wireless_action
+      - sensor.wireless_click
+      - sensor.cube_action
       - device_tracker.zhong_ye_san_jiu
       - device_tracker.zhong_ye_yi_hua
       - sensor.zhong_ye_san_jiu_activity
@@ -51,3 +54,39 @@ history:
       - sensor.zhong_ye_yi_hua_ssid
       - sensor.zhong_ye_yi_hua_steps
       - sensor.zhong_ye_yi_hua_storage
+      - sensor.bedroom_door_battery
+      - sensor.bedroom_motion_battery
+      - sensor.cube_battery
+      - sensor.doorway_motion_battery
+      - sensor.home_door_battery
+      - sensor.kitchen_door_battery
+      - sensor.kitchen_motion_battery
+      - sensor.temp_humidity_battery
+      - sensor.wireless_battery
+      - sensor.bedside_socket_voltage
+      - sensor.desk_socket_voltage
+      - sensor.floor_socket_voltage
+      - sensor.induktion_socket_voltage
+      - sensor.kitchen_socket_voltage
+      - sensor.bedroom_door_linkquality
+      - sensor.bedroom_motion_linkquality
+      - sensor.bedside_socket_linkquality
+      - sensor.ceiling_linkquality
+      - sensor.cube_linkquality
+      - sensor.desk_socket_linkquality
+      - sensor.doorway_light_linkquality
+      - sensor.doorway_motion_linkquality
+      - sensor.floor_socket_linkquality
+      - sensor.home_door_linkquality
+      - sensor.induktion_socket_linkquality
+      - sensor.kitchen_door_linkquality
+      - sensor.kitchen_motion_linkquality
+      - sensor.kitchen_socket_linkquality
+      - sensor.temp_humidity_linkquality
+      - sensor.toilet_light_linkquality
+      - sensor.wireless_linkquality
+      - sensor.bedside_socket_temperature
+      - sensor.desk_socket_temperature
+      - sensor.floor_socket_temperature
+      - sensor.induktion_socket_temperature
+      - sensor.kitchen_socket_temperature
