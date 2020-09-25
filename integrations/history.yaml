@@ -15,23 +15,39 @@ history:
       - switch.adguard_parental_control
       - switch.adguard_safe_browsing
       - switch.adguard_safe_search
-      - sensor.chu_fang_dong_zuo_battery
-      - sensor.chu_fang_men_battery
-      - sensor.da_men_battery
-      - sensor.mo_fang_battery
-      - sensor.wei_sheng_jian_dong_zuo_battery
-      - sensor.wen_shi_du_chuan_gan_qi_battery
-      - sensor.wo_shi_dong_zuo_battery
-      - sensor.wo_shi_men_battery
-      - sensor.wu_xian_kai_guan_battery
-      - sensor.zou_lang_dong_zuo_battery
       - sensor.zigbee2mqtt_networkmap
       - binary_sensor.night_light_nightlight
-      - binary_sensor.0x7cb03eaa0a05a30f_update_available
+      - binary_sensor.doorway_light_update_available
+      - binary_sensor.toilet_light_update_available
       - binary_sensor.0x7cb03eaa0a00c711_update_available
       - sensor.wall_linkquality
-      - switch.wall_switch_l1
-      - switch.wall_switch_l2
+      - switch.ceiling_switch_l1
+      - switch.ceiling_switch_l2
       - switch.wake_on_lan
-      - sensor.mo_fang_action
-      - sensor.wu_xian_kai_guan_click
+      - device_tracker.zhong_ye_san_jiu
+      - device_tracker.zhong_ye_yi_hua
+      - sensor.zhong_ye_san_jiu_activity
+      - sensor.zhong_ye_san_jiu_battery_level
+      - sensor.zhong_ye_san_jiu_battery_state
+      - sensor.zhong_ye_san_jiu_bssid
+      - sensor.zhong_ye_san_jiu_connection_type
+      - sensor.zhong_ye_san_jiu_geocoded_location
+      - sensor.zhong_ye_san_jiu_last_update_trigger
+      - sensor.zhong_ye_san_jiu_ssid
+      - sensor.zhong_ye_san_jiu_storage
+      - sensor.zhong_ye_yi_hua_activity
+      - sensor.zhong_ye_yi_hua_average_active_pace
+      - sensor.zhong_ye_yi_hua_battery_level
+      - sensor.zhong_ye_yi_hua_battery_state
+      - sensor.zhong_ye_yi_hua_bssid
+      - sensor.zhong_ye_yi_hua_connection_type
+      - sensor.zhong_ye_yi_hua_distance
+      - sensor.zhong_ye_yi_hua_floors_ascended
+      - sensor.zhong_ye_yi_hua_floors_descended
+      - sensor.zhong_ye_yi_hua_geocoded_location
+      - sensor.zhong_ye_yi_hua_last_update_trigger
+      - sensor.zhong_ye_yi_hua_sim_1
+      - sensor.zhong_ye_yi_hua_sim_2
+      - sensor.zhong_ye_yi_hua_ssid
+      - sensor.zhong_ye_yi_hua_steps
+      - sensor.zhong_ye_yi_hua_storage
