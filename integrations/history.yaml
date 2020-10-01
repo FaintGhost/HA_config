@@ -9,6 +9,7 @@ history:
       - remote
       - input_boolean
     entities:
+      - persistent_notification.homeassistant_check_config
       - sensor.adguard_parental_control_blocked
       - sensor.adguard_safe_browsing_blocked
       - sensor.adguard_safe_searches_enforced
