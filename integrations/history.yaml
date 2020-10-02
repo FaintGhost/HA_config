@@ -91,3 +91,5 @@ history:
       - sensor.floor_socket_temperature
       - sensor.induktion_socket_temperature
       - sensor.kitchen_socket_temperature
+      - sensor.0x588e81fffeadec8f_update_state
+      - sensor.0x7cb03eaa0a00c711_update_state
