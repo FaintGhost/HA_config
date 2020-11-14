@@ -10,6 +10,9 @@ homekit:
       - switch.xi_yi_ji_cha_zuo_switch
       - binary_sensor.chu_fang_dong_zuo_occupancy
       - binary_sensor.ping_192_168_1_23
+      - switch.floor_socket
+      - switch.bedside_socket
+      - switch.desk_socket
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*
