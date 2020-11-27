@@ -1,3 +1,0 @@
-songpal:
-  - name: SRS-X99
-    endpoint: !secret songpal_endpoint

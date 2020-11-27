@@ -30,8 +30,6 @@ switch.pc_switch:
   friendly_name: 台式机
   icon: mdi:desktop-tower
   assumed_state: false
-media_player.srs_x99:
-  friendly_name: SRS-X99
 script.homeassistant_restart:
   friendly_name: 重新启动
   icon: mdi:restart

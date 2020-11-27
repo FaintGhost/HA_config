@@ -29,9 +29,3 @@ homekit:
       - automation
       - script
       - remote
-    include_entities:
-      - media_player.srs_x99
-  entity_config:
-    media_player.srs_x99:
-      feature_list:
-        - feature: on_off
