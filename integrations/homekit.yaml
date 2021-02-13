@@ -13,6 +13,7 @@ homekit:
       - switch.floor_socket
       - switch.bedside_socket
       - switch.desk_socket
+      - sensor.0x00158d000257f9fb_temperature
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*
