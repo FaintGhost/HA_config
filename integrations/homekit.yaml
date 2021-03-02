@@ -14,12 +14,14 @@ homekit:
       - switch.bedside_socket
       - switch.desk_socket
       - sensor.0x00158d000257f9fb_temperature
+      - sensor.doorway_motion_temperature
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*
       - switch.adguard_*
       - sensor.*_socket_temperature
       - sensor.*_illuminance_*
+      - sensor.*_illuminance
       - binary_sensor.*_update_available
       - binary_sensor.*_power_outage_memory
       - device_tracker.*

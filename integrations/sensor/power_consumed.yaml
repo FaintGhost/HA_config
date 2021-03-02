@@ -4,4 +4,4 @@ sensor:
       power_consumed:
         friendly_name: "总耗电量"
         unit_of_measurement: "kWh"
-        value_template: "{{ ((state_attr('sensor.kitchen_socket_consumption', 'consumption') | float) + (state_attr('sensor.induktion_socket_consumption', 'consumption') | float) + (state_attr('sensor.bedside_socket_consumption', 'consumption') | float) + (state_attr('sensor.floor_socket_consumption', 'consumption') | float) + (state_attr('sensor.desk_socket_consumption', 'consumption') | float)) | round(2) }}"
+        value_template: "{{ ((state_attr('sensor.kitchen_socket_energy', 'consumption') | float) + (state_attr('sensor.induktion_socket_energy', 'consumption') | float) + (state_attr('sensor.bedside_socket_energy', 'consumption') | float) + (state_attr('sensor.floor_socket_energy', 'consumption') | float) + (state_attr('sensor.desk_socket_energy', 'consumption') | float)) | round(2) }}"
