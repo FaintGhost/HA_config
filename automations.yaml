@@ -1,109 +1,111 @@
 - id: enable_zigbee_join
   alias: 【全天】开启网关添加设备
   trigger:
-  - entity_id: input_boolean.zigbee_permit_join
-    platform: state
-    to: 'on'
+    - entity_id: input_boolean.zigbee_permit_join
+      platform: state
+      to: "on"
   action:
-  - data:
-      payload: 'true'
-      topic: zigbee2mqtt/bridge/config/permit_join
-    service: mqtt.publish
-  - data:
-      entity_id: timer.zigbee_permit_join
-    service: timer.start
+    - data:
+        payload: "true"
+        topic: zigbee2mqtt/bridge/config/permit_join
+      service: mqtt.publish
+    - data:
+        entity_id: timer.zigbee_permit_join
+      service: timer.start
 - id: disable_zigbee_join
   alias: 【全天】关闭网关添加设备
   trigger:
-  - entity_id: input_boolean.zigbee_permit_join
-    platform: state
-    to: 'off'
+    - entity_id: input_boolean.zigbee_permit_join
+      platform: state
+      to: "off"
   action:
-  - data:
-      payload: 'false'
-      topic: zigbee2mqtt/bridge/config/permit_join
-    service: mqtt.publish
-  - data:
-      entity_id: timer.zigbee_permit_join
-    service: timer.cancel
+    - data:
+        payload: "false"
+        topic: zigbee2mqtt/bridge/config/permit_join
+      service: mqtt.publish
+    - data:
+        entity_id: timer.zigbee_permit_join
+      service: timer.cancel
 - id: disable_zigbee_join_timer
   alias: 【全天】倒计时结束关闭网关添加设备
   trigger:
-  - event_data:
-      entity_id: timer.zigbee_permit_join
-    event_type: timer.finished
-    platform: event
+    - event_data:
+        entity_id: timer.zigbee_permit_join
+      event_type: timer.finished
+      platform: event
   action:
-  - data:
-      payload: 'false'
-      topic: zigbee2mqtt/bridge/config/permit_join
-    service: mqtt.publish
-  - data:
-      entity_id: input_boolean.zigbee_permit_join
-    service: input_boolean.turn_off
-- id: '1588087397029'
+    - data:
+        payload: "false"
+        topic: zigbee2mqtt/bridge/config/permit_join
+      service: mqtt.publish
+    - data:
+        entity_id: input_boolean.zigbee_permit_join
+      service: input_boolean.turn_off
+- id: "1588087397029"
   alias: 【全天】新设备加入网络创建通知
-  description: ''
+  description: ""
   trigger:
-  - platform: mqtt
-    topic: zigbee2mqtt/bridge/log
+    - platform: mqtt
+      topic: zigbee2mqtt/bridge/log
   condition:
-  - condition: template
-    value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message
-      == "interview_successful"}}'
+    - condition: template
+      value_template:
+        '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message
+        == "interview_successful"}}'
   action:
-  - data:
-      message: 'Name: {{trigger.payload_json.meta.friendly_name}}
+    - data:
+        message: "Name: {{trigger.payload_json.meta.friendly_name}}
 
-        Model: {{trigger.payload_json.meta.model}}
+          Model: {{trigger.payload_json.meta.model}}
 
-        Vendor: {{trigger.payload_json.meta.vendor}}
+          Vendor: {{trigger.payload_json.meta.vendor}}
 
-        Description: {{trigger.payload_json.meta.description}}
+          Description: {{trigger.payload_json.meta.description}}
 
-        Supported: {{trigger.payload_json.meta.supported}}'
-      title: 新设备已添加
-    data_template:
-      message: 'Name: {{trigger.payload_json.meta.friendly_name}}
+          Supported: {{trigger.payload_json.meta.supported}}"
+        title: 新设备已添加
+      data_template:
+        message: "Name: {{trigger.payload_json.meta.friendly_name}}
 
-        Model: {{trigger.payload_json.meta.model}}
+          Model: {{trigger.payload_json.meta.model}}
 
-        Vendor: {{trigger.payload_json.meta.vendor}}
+          Vendor: {{trigger.payload_json.meta.vendor}}
 
-        Description: {{trigger.payload_json.meta.description}}
+          Description: {{trigger.payload_json.meta.description}}
 
-        Supported: {{trigger.payload_json.meta.supported}}'
-      title: 新设备已添加
-    service: persistent_notification.create
-- id: '1591314123622'
+          Supported: {{trigger.payload_json.meta.supported}}"
+        title: 新设备已添加
+      service: persistent_notification.create
+- id: "1591314123622"
   alias: 【夜间】启动切换主题
-  description: ''
+  description: ""
   trigger:
-  - event: start
-    platform: homeassistant
+    - event: start
+      platform: homeassistant
   condition:
-  - condition: not
-    conditions:
+    - condition: not
+      conditions:
+        - after: sunset
+          before: sunrise
+          condition: sun
+  action:
+    - data:
+        name: Google Dark Theme
+      service: frontend.set_theme
+  mode: single
+- id: "1591314321755"
+  alias: 【白天】启动切换主题
+  description: ""
+  trigger:
+    - event: start
+      platform: homeassistant
+  condition:
     - after: sunset
       before: sunrise
       condition: sun
   action:
-  - data:
-      name: Google Dark Theme
-    service: frontend.set_theme
+    - data:
+        name: Google Light Theme
+      service: frontend.set_theme
   mode: single
-- id: '1591314321755'
-  alias: 【白天】启动切换主题
-  description: ''
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition:
-  - after: sunset
-    before: sunrise
-    condition: sun
-  action:
-  - data:
-      name: Google Light Theme
-    service: frontend.set_theme
-  mode: single
+#
