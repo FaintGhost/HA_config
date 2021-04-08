@@ -35,3 +35,5 @@ script.homeassistant_restart:
   icon: mdi:restart
 fan.my_fan:
   friendly_name: 风扇
+switch.transmission_switch:
+  friendly_name: Transmission 开关

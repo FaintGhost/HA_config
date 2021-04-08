@@ -46,3 +46,21 @@ sensor.wang_guan_zhuang_tai:
   friendly_name: 网关状态
 sensor.uptime:
   friendly_name: 启动时间
+sensor.transmission_active_torrents:
+  friendly_name: Transmission 激活的种子
+sensor.transmission_completed_torrents:
+  friendly_name: Transmission 完成的种子
+sensor.transmission_down_speed:
+  friendly_name: Transmission 下载速度
+sensor.transmission_paused_torrents:
+  friendly_name: Transmission 暂停的种子
+sensor.transmission_started_torrents:
+  friendly_name: Transmission 开始的种子
+sensor.transmission_status:
+  friendly_name: Transmission 状态
+sensor.transmission_up_speed:
+  friendly_name: Transmission 上传速度
+sensor.transmission_total_torrents:
+  friendly_name: Transmission 所有种子
+switch.transmission_turtle_mode:
+  friendly_name: Transmission 龟速模式
