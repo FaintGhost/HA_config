@@ -15,6 +15,7 @@ homekit:
       - switch.desk_socket
       - sensor.0x00158d000257f9fb_temperature
       - sensor.doorway_motion_temperature
+      - switch.0x680ae2fffe83dfbf_firmware_lock
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*
