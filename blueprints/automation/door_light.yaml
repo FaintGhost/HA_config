@@ -1,0 +1,37 @@
+blueprint:
+  name: 基于门窗的亮灯自动化
+  description: 打开门自动开灯
+  domain: automation
+  input:
+    door_entity:
+      name: 门窗传感器
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: door
+    light_target:
+      name: 灯
+      selector:
+        target:
+          entity:
+            domain: light
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  - platform: state
+    entity_id: !input door_entity
+    from: "off"
+    to: "on"
+
+action:
+  - service: light.turn_on
+    target: !input light_target
+  - wait_for_trigger:
+      platform: state
+      entity_id: !input door_entity
+      from: "on"
+      to: "off"
+  - service: light.turn_off
+    target: !input light_target

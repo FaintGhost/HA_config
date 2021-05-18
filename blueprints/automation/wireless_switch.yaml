@@ -1,0 +1,36 @@
+blueprint:
+  name: 无线开关自动化
+  description: 无线开关自动化支持单机、双击和长按。
+  domain: automation
+  input:
+    sensor_entity:
+      name: 无线开关
+      selector:
+        entity:
+          domain: sensor
+    control_target:
+      name: 被控实体
+      selector:
+        target:
+          entity:
+            domain: light
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  - platform: state
+    entity_id: !input door_entity
+    from: "off"
+    to: "on"
+
+action:
+  - service: light.turn_on
+    target: !input light_target
+  - wait_for_trigger:
+      platform: state
+      entity_id: !input door_entity
+      from: "on"
+      to: "off"
+  - service: light.turn_off
+    target: !input light_target
