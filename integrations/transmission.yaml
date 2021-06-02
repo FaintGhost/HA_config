@@ -1,5 +1,0 @@
-transmission:
-  host: 192.168.1.90
-  port: 9091
-  username: !secret tr_username
-  password: !secret tr_password
