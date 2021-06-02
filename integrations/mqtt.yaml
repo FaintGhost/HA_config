@@ -1,12 +1,5 @@
 mqtt:
-  discovery: true
   broker: core-mosquitto
   port: 1883
   username: !secret mqtt_username
   password: !secret mqtt_password
-  birth_message:
-    topic: "homeassistant/status"
-    payload: "online"
-  will_message:
-    topic: "homeassistant/status"
-    payload: "offline"
