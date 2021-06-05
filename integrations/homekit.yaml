@@ -16,6 +16,8 @@ homekit:
       - sensor.0x00158d000257f9fb_temperature
       - sensor.doorway_motion_temperature
       - switch.0x680ae2fffe83dfbf_firmware_lock
+      - sensor.4c65a8d336b7_humidity
+      - sensor.4c65a8d336b7_temperature
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*

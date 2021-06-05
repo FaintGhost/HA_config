@@ -3,13 +3,15 @@ sensor.chu_fang_dong_zuo_illuminance:
 sensor.doorway_motion_illuminance:
   friendly_name: 走廊亮度
 sensor.temperature:
-  friendly_name: 卧室温度
+  friendly_name: 蓝牙温度
 sensor.humidity:
+  friendly_name: 蓝牙湿度
+sensor.aqara_weather_humidity:
   friendly_name: 卧室湿度
-sensor.4c65a8d336b7_temperature:
-  friendly_name: 走廊温度
-sensor.4c65a8d336b7_humidity:
-  friendly_name: 走廊湿度
+sensor.aqara_weather_pressure:
+  friendly_name: 卧室气压
+sensor.aqara_weather_temperature:
+  friendly_name: 卧室温度
 sensor.cpu_temperature:
   friendly_name: CPU温度
 sensor.adguard_safe_browsing_blocked:
