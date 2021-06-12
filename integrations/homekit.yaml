@@ -3,7 +3,6 @@ homekit:
     exclude_entities:
       - switch.xiaomi_miio_switch
       - binary_sensor.remote_ui
-      - sensor.cpu_temperature
       - binary_sensor.night_light_nightlight
       - switch.wake_on_lan
       - binary_sensor.ping_binary_sensor
@@ -16,8 +15,7 @@ homekit:
       - sensor.0x00158d000257f9fb_temperature
       - sensor.doorway_motion_temperature
       - switch.0x680ae2fffe83dfbf_firmware_lock
-      - sensor.4c65a8d336b7_humidity
-      - sensor.4c65a8d336b7_temperature
+      - binary_sensor.minecraft_server_status
     exclude_entity_globs:
       - switch.wall_*
       - switch.fan_*

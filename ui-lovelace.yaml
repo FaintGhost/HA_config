@@ -17,6 +17,17 @@ views:
             url: >-
               https://embed.windy.com/embed2.html?lat=51.337&lon=12.377&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.067&detailLon=14.383&metricWind=default&metricTemp=default&radarRange=-1
         type: vertical-stack
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.aqara_weather_temperature
+            graph: line
+          - type: sensor
+            entity: sensor.aqara_weather_humidity
+            graph: line
+          - type: sensor
+            entity: sensor.aqara_weather_pressure
+            graph: line
       - entity: sensor.power_consumed
         type: entity
       - cards:
@@ -32,7 +43,7 @@ views:
                   - sensor.temperature
                 hours_to_show: 168
                 points_per_hour: 0.25
-                type: "custom:mini-graph-card"
+                type: custom:mini-graph-card
               - color_thresholds:
                   - color: "#008000"
                     value: 30
@@ -44,7 +55,7 @@ views:
                   - sensor.humidity
                 hours_to_show: 168
                 points_per_hour: 0.25
-                type: "custom:mini-graph-card"
+                type: custom:mini-graph-card
             type: horizontal-stack
           - cards:
               - entities:
@@ -61,67 +72,15 @@ views:
                     name: 平均
                 hours_to_show: 24
                 name: 功率
-                type: "custom:mini-graph-card"
+                type: custom:mini-graph-card
             type: horizontal-stack
         type: vertical-stack
-      # - entities:
-      #     - entity: fan.my_fan
-      #       tap_action:
-      #         action: call-service
-      #         service: fan.toggle
-      #         service_data:
-      #           entity_id: fan.my_fan
-      #     - entity: switch.fan_oscillate
-      #       icon: "mdi:rotate-3d-variant"
-      #       tap_action:
-      #         action: call-service
-      #         service: switch.toggle
-      #         service_data:
-      #           entity_id: switch.fan_oscillate
-      #     - entity: switch.fan_speed_one
-      #       icon: "mdi:numeric-1"
-      #       name: null
-      #       tap_action:
-      #         action: call-service
-      #         service: fan.set_speed
-      #         service_data:
-      #           entity_id: fan.my_fan
-      #           speed: 1
-      #     - entity: switch.fan_speed_two
-      #       icon: "mdi:numeric-2"
-      #       name: 档位
-      #       tap_action:
-      #         action: call-service
-      #         service: fan.set_speed
-      #         service_data:
-      #           entity_id: fan.my_fan
-      #           speed: 2
-      #     - entity: switch.fan_speed_three
-      #       icon: "mdi:numeric-3"
-      #       name: null
-      #       tap_action:
-      #         action: call-service
-      #         service: fan.set_speed
-      #         service_data:
-      #           entity_id: fan.my_fan
-      #           speed: 3
-      #   show_icon: true
-      #   show_name: true
-      #   show_state: false
-      #   type: glance
-      - artwork: cover
-        entity: media_player.srs_x99
-        hide:
-          controls: true
-          icon_state: false
-          power_state: false
-        type: "custom:mini-media-player"
       - entities:
           - entity: sensor.germany_coronavirus_current
             name: 现存
         hours_to_show: 168
         name: 德国疫情
-        type: "custom:mini-graph-card"
+        type: custom:mini-graph-card
       - entities:
           - entity: light.ceiling_light
             tap_action:
@@ -139,11 +98,6 @@ views:
             tap_action:
               action: toggle
         type: glance
-      - entities:
-          - entity: switch.adguard_protection
-          - entity: sensor.adguard_average_processing_speed
-        show_header_toggle: false
-        type: entities
       - card:
           title: 激活的传感器
           type: glance
@@ -152,20 +106,26 @@ views:
           - entity: binary_sensor.bedroom_door
           - entity: binary_sensor.kitchen_door
           - entity: binary_sensor.doorway_motion
-          - entity: binary_sensor.bedroom_motion
+          - entity: binary_sensor.toilet_motion
           - entity: binary_sensor.kitchen_motion
         show_empty: false
         state_filter:
           - "on"
         type: entity-filter
       - entities:
+          - entity: switch.adguard_protection
+          - entity: sensor.adguard_average_processing_speed
+        show_header_toggle: false
+        type: entities
+      - entities:
           - entity: switch.kitchen_socket
+          - entity: switch.induktion_socket
           - entity: switch.bedside_socket
           - entity: switch.desk_socket
           - entity: switch.floor_socket
         show_header_toggle: false
         type: entities
-    icon: "mdi:home"
+    icon: mdi:home
     panel: false
     path: default_view
     title: Home
@@ -191,19 +151,11 @@ views:
         link_width: 2
         mqtt_base_topic: zigbee2mqtt
         node_size: 16
-        type: "custom:zigbee2mqtt-networkmap"
-    icon: "mdi:chart-bubble"
+        type: custom:zigbee2mqtt-networkmap
+    icon: mdi:chart-bubble
     panel: true
     path: networkmap
     title: Networkmap
-  - badges: []
-    cards:
-      - aspect_ratio: 100%
-        type: iframe
-        url: "https://nr.awyun.top"
-    icon: "mdi:sitemap"
-    panel: true
-    title: Node-RED
   - badges: []
     cards:
       - entity: sensor.uptime
@@ -232,13 +184,24 @@ views:
             name: 平均
         hours_to_show: 24
         name: CPU温度
-        type: "custom:mini-graph-card"
-      - entities:
-          - entity: sensor.weekly_energy
-        name: ENERGY CONSUMPTION
-        show:
-          graph: bar
-        type: "custom:mini-graph-card"
-    icon: "mdi:server-network"
+        type: custom:mini-graph-card
+      - type: entities
+        entities:
+          - entity: sensor.transmission_active_torrents
+          - entity: sensor.transmission_completed_torrents
+          - entity: sensor.transmission_down_speed
+          - entity: sensor.transmission_status
+          - entity: sensor.transmission_up_speed
+        title: Transmission
+      - type: entities
+        entities:
+          - entity: binary_sensor.minecraft_server_status
+          - entity: sensor.minecraft_server_latency_time
+          - entity: sensor.minecraft_server_players_max
+          - entity: sensor.minecraft_server_players_online
+          - entity: sensor.minecraft_server_protocol_version
+          - entity: sensor.minecraft_server_version
+        title: Minecraft 服务器
+    icon: mdi:server-network
     path: panel
     title: PANEL
