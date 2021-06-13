@@ -1,0 +1,4 @@
+media_player:
+  - platform: emby
+    host: 192.168.1.130
+    api_key: 772fb17d109c4125ab2950b5a69f686a
