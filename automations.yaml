@@ -52,58 +52,16 @@
     value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message
       == "interview_successful"}}'
   action:
-  - data:
-      message: 'Name: {{trigger.payload_json.meta.friendly_name}}
-
-        Model: {{trigger.payload_json.meta.model}}
-
-        Vendor: {{trigger.payload_json.meta.vendor}}
-
-        Description: {{trigger.payload_json.meta.description}}
-
-        Supported: {{trigger.payload_json.meta.supported}}'
+  - data_template:
       title: 新设备已添加
-    data_template:
-      message: 'Name: {{trigger.payload_json.meta.friendly_name}}
+      message: '名称: {{trigger.payload_json.meta.friendly_name}}
 
-        Model: {{trigger.payload_json.meta.model}}
+        型号: {{trigger.payload_json.meta.model}}
 
-        Vendor: {{trigger.payload_json.meta.vendor}}
+        供应商: {{trigger.payload_json.meta.vendor}}
 
-        Description: {{trigger.payload_json.meta.description}}
+        描述: {{trigger.payload_json.meta.description}}
 
-        Supported: {{trigger.payload_json.meta.supported}}'
-      title: 新设备已添加
-    service: persistent_notification.create
-- id: '1591314123622'
-  alias: 【夜间】启动切换主题
-  description: ''
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition:
-  - condition: not
-    conditions:
-    - after: sunset
-      before: sunrise
-      condition: sun
-  action:
-  - data:
-      name: Google Dark Theme
-    service: frontend.set_theme
-  mode: single
-- id: '1591314321755'
-  alias: 【白天】启动切换主题
-  description: ''
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition:
-  - after: sunset
-    before: sunrise
-    condition: sun
-  action:
-  - data:
-      name: Google Light Theme
-    service: frontend.set_theme
+        支持: {{trigger.payload_json.meta.supported}}'
+    service: notify.persistent_notification
   mode: single
