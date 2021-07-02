@@ -14,7 +14,7 @@ homeassistant:
 http:
   use_x_forwarded_for: true
   trusted_proxies:
-    - 192.168.1.151
+    - 192.168.1.195
 
 automation: !include automations.yaml
 
