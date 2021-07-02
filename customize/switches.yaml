@@ -14,8 +14,6 @@ switch.induktion_socket:
 switch.bedside_socket:
   friendly_name: 床头插座
   icon: mdi:power-socket-jp
-# switch.shelly:
-#   friendly_name: 墙壁开关
 switch.adguard_protection:
   friendly_name: AdGuard 保护
 switch.adguard_filtering:

@@ -21,6 +21,7 @@ homekit:
       - switch.fan_*
       - switch.adguard_*
       - sensor.*_socket_temperature
+      - switch.*_power_outage_*
       - sensor.*_illuminance_*
       - sensor.*_illuminance
       - binary_sensor.*_update_available
