@@ -31,7 +31,3 @@ switch.pc_switch:
 script.homeassistant_restart:
   friendly_name: 重新启动
   icon: mdi:restart
-fan.my_fan:
-  friendly_name: 风扇
-switch.transmission_switch:
-  friendly_name: Transmission 开关

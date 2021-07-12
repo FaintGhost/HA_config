@@ -1,0 +1,6 @@
+# Example configuration.yaml entry
+sensor:
+  - platform: qbittorrent
+    url: "http://192.168.1.90:8081"
+    username: !secret qb_username
+    password: !secret qb_password
