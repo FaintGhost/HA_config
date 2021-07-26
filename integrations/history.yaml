@@ -22,6 +22,12 @@ history:
       - binary_sensor.*_update_available
       - sensor.*_update_state
       - switch.*_power_outage_memory
+      - sensor.*_socket_temperature
+      - sensor.*_motion_temperature
+      - sensor.*_socket_energy
+      - sensor.*_socket_power
+      - sensor.*_illuminance
+      - sensor.*_illuminance_lux
     entities:
       - persistent_notification.homeassistant_check_config
       - sensor.single_switch_action
