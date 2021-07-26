@@ -13,22 +13,18 @@ history:
       - switch.adguard_*
       - sensor.zhong_ye_san_jiu_*
       - sensor.zhong_ye_yi_hua_*
+      - sensor.zhong_ye_si_xie_*
       - sensor.*_linkquality
       - sensor.*_voltage
       - sensor.*_battery
-      - sensor.*_temperature
       - switch.ceiling_switch_*
       - device_tracker.*
       - binary_sensor.*_update_available
       - sensor.*_update_state
-      - sensor.transmission_*
-      - switch.transmission_*
+      - switch.*_power_outage_memory
     entities:
       - persistent_notification.homeassistant_check_config
-      - sensor.zigbee2mqtt_networkmap
+      - sensor.single_switch_action
       - binary_sensor.night_light_nightlight
       - switch.wake_on_lan
-      - sensor.wireless_action
-      - sensor.wireless_click
-      - sensor.cube_action
-
+      - sensor.0x00158d0001563f1a_action

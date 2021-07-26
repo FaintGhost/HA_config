@@ -1,16 +1,22 @@
 title: 智能家居管理系统
 views:
-  - badges: []
+  - icon: mdi:home
+    panel: false
+    path: default_view
+    title: Home
+    badges: []
     cards:
       - cards:
           - entity: weather.jia
             name: 莱比锡
             type: weather-forecast
-          - aspect_ratio: 75%
+          - aspect_ratio: 50%
             type: iframe
             url: >-
               https://embed.windy.com/embed2.html?lat=51.337&lon=12.377&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.067&detailLon=14.383&metricWind=default&metricTemp=default&radarRange=-1
         type: vertical-stack
+      - entity: sensor.power_consumed
+        type: entity
       - type: horizontal-stack
         cards:
           - type: sensor
@@ -22,8 +28,6 @@ views:
           - type: sensor
             entity: sensor.aqara_weather_pressure
             graph: line
-      - entity: sensor.power_consumed
-        type: entity
       - cards:
           - cards:
               - color_thresholds:
@@ -119,37 +123,6 @@ views:
           - entity: switch.floor_socket
         show_header_toggle: false
         type: entities
-    icon: mdi:home
-    panel: false
-    path: default_view
-    title: Home
-  - badges: []
-    cards:
-      - css: |
-          :host {
-            --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
-            --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
-            --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);
-            --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);
-            --zigbee2mqtt-networkmap-hover-color: #be385d;
-            --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);
-            --zigbee2mqtt-networkmap-label-color: #127862;
-            --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);
-            --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
-            --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
-          }
-        entity: sensor.zigbee2mqtt_networkmap
-        font_size: 12
-        force: 3000
-        height: 700
-        link_width: 2
-        mqtt_base_topic: zigbee2mqtt
-        node_size: 16
-        type: custom:zigbee2mqtt-networkmap
-    icon: mdi:chart-bubble
-    panel: true
-    path: networkmap
-    title: Networkmap
   - badges: []
     cards:
       - entity: sensor.uptime
@@ -164,29 +137,12 @@ views:
         show_header_toggle: false
         title: 系统
         type: entities
-      - entities:
-          - aggregate_func: max
-            color: null
-            entity: sensor.cpu_temperature
-            name: 最高
-          - aggregate_func: min
-            entity: sensor.cpu_temperature
-            name: 最低
-          - aggregate_func: avg
-            color: green
-            entity: sensor.cpu_temperature
-            name: 平均
-        hours_to_show: 24
-        name: CPU温度
-        type: custom:mini-graph-card
       - type: entities
         entities:
-          - entity: sensor.transmission_active_torrents
-          - entity: sensor.transmission_completed_torrents
-          - entity: sensor.transmission_down_speed
-          - entity: sensor.transmission_status
-          - entity: sensor.transmission_up_speed
-        title: Transmission
+          - entity: sensor.qbittorrent_status
+          - entity: sensor.qbittorrent_down_speed
+          - entity: sensor.qbittorrent_up_speed
+        title: qBittorrent
       - type: entities
         entities:
           - entity: binary_sensor.minecraft_server_status
