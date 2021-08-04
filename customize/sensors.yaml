@@ -75,3 +75,14 @@ sensor.qbittorrent_status:
 sensor.qbittorrent_up_speed:
   friendly_name: qBittorrent 上传速度
   icon: mdi:upload
+# socket
+sensor.bedside_socket_energy:
+  friendly_name: 床头插座耗电
+sensor.desk_socket_energy:
+  friendly_name: 桌下插座耗电
+sensor.floor_socket_energy:
+  friendly_name: 地下插座耗电
+sensor.induktion_socket_energy:
+  friendly_name: 电磁炉插座耗电
+sensor.kitchen_socket_energy:
+  friendly_name: 厨房插座耗电
