@@ -5,4 +5,5 @@ sensor:
       power_loaded:
         friendly_name: "总功率"
         unit_of_measurement: "W"
+        device_class: power
         value_template: "{{ ((state_attr('sensor.kitchen_socket_power', 'power') | float) + (state_attr('sensor.induktion_socket_power', 'power') | float) + (state_attr('sensor.bedside_socket_power', 'power') | float) + (state_attr('sensor.floor_socket_power', 'power') | float) + (state_attr('sensor.desk_socket_power', 'power') | float)) | round(2) }}"
