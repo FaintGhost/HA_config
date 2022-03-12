@@ -6,11 +6,11 @@ sensor.temperature:
   friendly_name: 蓝牙温度
 sensor.humidity:
   friendly_name: 蓝牙湿度
-sensor.aqara_weather_humidity:
+sensor.0x00158d00068b7b55_humidity:
   friendly_name: 卧室湿度
-sensor.aqara_weather_pressure:
+sensor.0x00158d00068b7b55_pressure:
   friendly_name: 卧室气压
-sensor.aqara_weather_temperature:
+sensor.0x00158d00068b7b55_temperature:
   friendly_name: 卧室温度
 sensor.cpu_temperature:
   friendly_name: CPU温度
@@ -52,19 +52,6 @@ sensor.wang_guan_zhuang_tai:
   friendly_name: 网关状态
 sensor.uptime:
   friendly_name: 启动时间
-# mc server
-sensor.minecraft_server_latency_time:
-  friendly_name: Minecraft 服务器延迟
-sensor.minecraft_server_players_max:
-  friendly_name: Minecraft 服务器最大玩家数
-sensor.minecraft_server_players_online:
-  friendly_name: Minecraft 服务器在线玩家数
-sensor.minecraft_server_protocol_version:
-  friendly_name: Minecraft 服务器协议版本
-binary_sensor.minecraft_server_status:
-  friendly_name: Minecraft 服务器状态
-sensor.minecraft_server_version:
-  friendly_name: Minecraft 服务器版本
 # qbittorrent
 sensor.qbittorrent_down_speed:
   friendly_name: qBittorrent 下载速度
@@ -75,14 +62,3 @@ sensor.qbittorrent_status:
 sensor.qbittorrent_up_speed:
   friendly_name: qBittorrent 上传速度
   icon: mdi:upload
-# socket
-sensor.bedside_socket_energy:
-  friendly_name: 床头插座耗电
-sensor.desk_socket_energy:
-  friendly_name: 桌下插座耗电
-sensor.floor_socket_energy:
-  friendly_name: 地下插座耗电
-sensor.induktion_socket_energy:
-  friendly_name: 电磁炉插座耗电
-sensor.kitchen_socket_energy:
-  friendly_name: 厨房插座耗电

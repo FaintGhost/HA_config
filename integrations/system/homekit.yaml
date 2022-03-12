@@ -1,0 +1,20 @@
+homekit:
+  - name: HA Bridge
+    port: 21065
+    filter:
+      include_entities:
+        - binary_sensor.0x00158d0001b862e7_contact
+        - sensor.0x00158d00068b7b55_humidity
+        - sensor.0x00158d00068b7b55_pressure
+        - sensor.0x00158d00068b7b55_temperature
+        - binary_sensor.0x00158d0001bf47c1_contact
+        - binary_sensor.0x00158d00010f84dd_occupancy
+        - binary_sensor.0x00158d0001583bba_contact
+        - light.kitchen_light
+        - switch.0x00158d000154b2cb
+        - light.0x7cb03eaa0a00c711
+        - binary_sensor.0x00158d0002f98ea9_occupancy
+        - binary_sensor.0x00158d000257f9fb_occupancy
+        - light.doorway_light
+        - light.ceiling_light
+        - light.night_light

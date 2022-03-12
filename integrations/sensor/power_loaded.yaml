@@ -6,4 +6,4 @@ sensor:
         friendly_name: "总功率"
         unit_of_measurement: "W"
         device_class: power
-        value_template: "{{ ((state_attr('sensor.kitchen_socket_power', 'power') | float) + (state_attr('sensor.induktion_socket_power', 'power') | float) + (state_attr('sensor.bedside_socket_power', 'power') | float) + (state_attr('sensor.floor_socket_power', 'power') | float) + (state_attr('sensor.desk_socket_power', 'power') | float)) | round(2) }}"
+        value_template: "{{ ( (states('sensor.0x00158d00012db5eb_power') | float(0) ) + ( states('sensor.0x00158d000154b2cb_power') | float(0) ) + ( states('sensor.0x00158d0001e89755_power') | float(0) ) + ( states('sensor.0x00158d0001e8975b_power') | float(0) ) + ( states('sensor.0x00158d000236c60a_power') | float(0) ) ) | round(2, default=0 ) }}"

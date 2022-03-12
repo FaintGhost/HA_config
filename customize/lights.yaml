@@ -1,5 +1,5 @@
 # lights
-light.toilet_light:
+light.0x7cb03eaa0a00c711:
   friendly_name: 厕所灯
   icon: mdi:ceiling-light
 light.night_light:

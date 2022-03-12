@@ -16,6 +16,9 @@ http:
   trusted_proxies:
     - 192.168.1.163
     - 192.168.1.110
+    - 192.168.1.111
+    - 192.168.1.112
+    - 192.168.1.113
 
 automation: !include automations.yaml
 
@@ -32,3 +35,4 @@ mobile_app:
 websocket_api:
 my:
 energy:
+sun:

@@ -1,4 +1,0 @@
-script:
-  homeassistant_restart:
-    sequence:
-      - service: homeassistant.restart

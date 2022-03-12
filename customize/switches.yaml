@@ -1,17 +1,17 @@
 # switches
-switch.kitchen_socket:
+switch.0x00158d000154b2cb:
   friendly_name: 厨房插座
   icon: mdi:power-socket-jp
-switch.floor_socket:
+switch.0x00158d000236c60a:
   friendly_name: 地下插座
   icon: mdi:power-socket-jp
-switch.desk_socket:
+switch.0x00158d0001e89755:
   friendly_name: 桌下插座
   icon: mdi:power-socket-jp
-switch.induktion_socket:
+switch.0x00158d00012db5eb:
   friendly_name: 电磁炉插座
   icon: mdi:power-socket-jp
-switch.bedside_socket:
+switch.0x00158d0001e8975b:
   friendly_name: 床头插座
   icon: mdi:power-socket-jp
 switch.adguard_protection:

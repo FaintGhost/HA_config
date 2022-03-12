@@ -16,12 +16,16 @@
 !flows.json
 /.vscode
 /integrations/.vscode/*
+/node-red/node_modules/*
+/custom_components/*
 
 # secrets
 secrets.yaml
 harmony_bedroom.conf
 home-assistant_v2.db-wal
 home-assistant_v2.db-shm
+home-assistant_v2.log.1
+home-assistant_v2.log.default
 
 # zigbee2mqtt
 /zigbee2mqtt/*
