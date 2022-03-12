@@ -15,19 +15,26 @@ views:
             url: >-
               https://embed.windy.com/embed2.html?lat=51.337&lon=12.377&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.067&detailLon=14.383&metricWind=default&metricTemp=default&radarRange=-1
         type: vertical-stack
+      - type: custom:sun-card
       - entity: sensor.power_consumed
         type: entity
       - type: horizontal-stack
         cards:
-          - type: sensor
-            entity: sensor.aqara_weather_temperature
+          - hours_to_show: 24
             graph: line
-          - type: sensor
-            entity: sensor.aqara_weather_humidity
+            type: sensor
+            entity: sensor.0x00158d00068b7b55_temperature
+            detail: 1
+          - hours_to_show: 24
             graph: line
-          - type: sensor
-            entity: sensor.aqara_weather_pressure
+            type: sensor
+            entity: sensor.0x00158d00068b7b55_humidity
+            detail: 1
+          - hours_to_show: 24
             graph: line
+            type: sensor
+            entity: sensor.0x00158d00068b7b55_pressure
+            detail: 1
       - cards:
           - cards:
               - color_thresholds:
@@ -74,19 +81,13 @@ views:
             type: horizontal-stack
         type: vertical-stack
       - entities:
-          - entity: sensor.germany_coronavirus_current
-            name: 现存
-        hours_to_show: 168
-        name: 德国疫情
-        type: custom:mini-graph-card
-      - entities:
           - entity: light.ceiling_light
             tap_action:
               action: toggle
           - entity: light.doorway_light
             tap_action:
               action: toggle
-          - entity: light.toilet_light
+          - entity: light.0x7cb03eaa0a00c711
             tap_action:
               action: toggle
           - entity: light.kitchen_light
@@ -100,12 +101,12 @@ views:
           title: 激活的传感器
           type: glance
         entities:
-          - entity: binary_sensor.home_door
-          - entity: binary_sensor.bedroom_door
-          - entity: binary_sensor.kitchen_door
-          - entity: binary_sensor.doorway_motion
-          - entity: binary_sensor.toilet_motion
-          - entity: binary_sensor.kitchen_motion
+          - entity: binary_sensor.0x00158d0001bf47c1_contact
+          - entity: binary_sensor.0x00158d0001b862e7_contact
+          - entity: binary_sensor.0x00158d0001583bba_contact
+          - entity: binary_sensor.0x00158d000257f9fb_occupancy
+          - entity: binary_sensor.0x00158d0002f98ea9_occupancy
+          - entity: binary_sensor.0x00158d00010f84dd_occupancy
         show_empty: false
         state_filter:
           - "on"
@@ -116,11 +117,11 @@ views:
         show_header_toggle: false
         type: entities
       - entities:
-          - entity: switch.kitchen_socket
-          - entity: switch.induktion_socket
-          - entity: switch.bedside_socket
-          - entity: switch.desk_socket
-          - entity: switch.floor_socket
+          - entity: switch.0x00158d000154b2cb
+          - entity: switch.0x00158d00012db5eb
+          - entity: switch.0x00158d0001e8975b
+          - entity: switch.0x00158d0001e89755
+          - entity: switch.0x00158d000236c60a
         show_header_toggle: false
         type: entities
   - badges: []
@@ -128,10 +129,7 @@ views:
       - entity: sensor.uptime
         type: entity
       - entities:
-          - entity: input_boolean.zigbee_permit_join
-          - entity: timer.zigbee_permit_join
           - entity: sensor.wang_guan_zhuang_tai
-          - entity: script.homeassistant_restart
           - entity: binary_sensor.ping_192_168_1_23
           - entity: switch.pc_switch
         show_header_toggle: false
@@ -143,15 +141,6 @@ views:
           - entity: sensor.qbittorrent_down_speed
           - entity: sensor.qbittorrent_up_speed
         title: qBittorrent
-      - type: entities
-        entities:
-          - entity: binary_sensor.minecraft_server_status
-          - entity: sensor.minecraft_server_latency_time
-          - entity: sensor.minecraft_server_players_max
-          - entity: sensor.minecraft_server_players_online
-          - entity: sensor.minecraft_server_protocol_version
-          - entity: sensor.minecraft_server_version
-        title: Minecraft 服务器
     icon: mdi:server-network
     path: panel
     title: PANEL
