@@ -24,8 +24,9 @@ secrets.yaml
 harmony_bedroom.conf
 home-assistant_v2.db-wal
 home-assistant_v2.db-shm
-home-assistant_v2.log.1
-home-assistant_v2.log.default
+home-assistant.log.1
+home-assistant.log.default
 
 # zigbee2mqtt
 /zigbee2mqtt/*
+ome-assistant.log.1

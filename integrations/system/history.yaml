@@ -1,36 +1,31 @@
 # Enables support for tracking state changes over time
 history:
-  exclude:
-    domains:
-      - automation
-      - updater
-      - script
-      - timer
-      - remote
-      - input_boolean
-    entity_globs:
-      - sensor.adguard_*
-      - switch.adguard_*
-      - sensor.zhong_ye_san_jiu_*
-      - sensor.zhong_ye_yi_hua_*
-      - sensor.zhong_ye_si_xie_*
-      - sensor.*_linkquality
-      - sensor.*_voltage
-      - sensor.*_battery
-      - switch.ceiling_switch_*
-      - device_tracker.*
-      - binary_sensor.*_update_available
-      - sensor.*_update_state
-      - switch.*_power_outage_memory
-      - sensor.*_socket_temperature
-      - sensor.*_motion_temperature
-      - sensor.*_socket_energy
-      - sensor.*_socket_power
-      - sensor.*_illuminance
-      - sensor.*_illuminance_lux
+  include:
     entities:
-      - persistent_notification.homeassistant_check_config
-      - sensor.single_switch_action
-      - binary_sensor.night_light_nightlight
-      - switch.wake_on_lan
-      - sensor.0x00158d0001563f1a_action
+      - binary_sensor.0x00158d00010f84dd_occupancy
+      - binary_sensor.0x00158d0001583bba_contact
+      - binary_sensor.0x00158d0001b862e7_contact
+      - binary_sensor.0x00158d0001bf47c1_contact
+      - binary_sensor.0x00158d000257f9fb_occupancy
+      - binary_sensor.0x00158d0002f98ea9_occupancy
+      - binary_sensor.ping_192_168_1_23
+      - light.0x7cb03eaa0a00c711
+      - light.ceiling_light
+      - light.doorway_light
+      - light.kitchen_light
+      - light.night_light
+      - media_player.wo_shi
+      - media_player.libratone_can_718348
+      - person.zhang
+      - sensor.0x00158d00068b7b55_humidity
+      - sensor.0x00158d00068b7b55_pressure
+      - sensor.0x00158d00068b7b55_temperature
+      - sensor.power_consumed
+      - sensor.power_loaded
+      - sensor.uptime
+      - sensor.wang_guan_zhuang_tai
+      - switch.0x00158d00012db5eb
+      - switch.0x00158d000154b2cb
+      - switch.0x00158d0001e89755
+      - switch.0x00158d0001e8975b
+      - switch.0x00158d000236c60a
