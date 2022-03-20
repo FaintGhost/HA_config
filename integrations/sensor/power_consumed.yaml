@@ -1,8 +1,0 @@
-sensor:
-  - platform: template
-    sensors:
-      power_consumed:
-        friendly_name: "总耗电量"
-        unit_of_measurement: "kWh"
-        device_class: energy
-        value_template: "{{ ( (states('sensor.0x00158d00012db5eb_energy') | float(0) ) + ( states('sensor.0x00158d000154b2cb_energy') | float(0) ) + ( states('sensor.0x00158d0001e89755_energy') | float(0) ) + ( states('sensor.0x00158d0001e8975b_energy') | float(0) ) + ( states('sensor.0x00158d000236c60a_energy') | float(0)) ) | round(2, default=0) }}"

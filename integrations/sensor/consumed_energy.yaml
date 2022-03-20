@@ -1,0 +1,13 @@
+template:
+  - sensor:
+      - name: consumed_energy
+        unit_of_measurement: kWh
+        state_class: total_increasing
+        device_class: energy
+        state: >
+          {% set induktion = states('sensor.0x00158d00012db5eb_energy') | float(0) %}
+          {% set kitchen = states('sensor.0x00158d000154b2cb_energy') | float(0) %}
+          {% set floor = states('sensor.0x00158d000236c60a_energy') | float(0) %}
+          {% set desk = states('sensor.0x00158d0001e89755_energy') | float(0) %}
+          {% set bedside = states('sensor.0x00158d0001e8975b_energy') | float(0) %}
+          {{ induktion + kitchen + floor + desk + bedside | round(2, default=0) }}

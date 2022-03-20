@@ -18,3 +18,7 @@ homekit:
         - light.doorway_light
         - light.ceiling_light
         - light.night_light
+        - switch.pc_switch
+    entity_config:
+      switch.pc_switch:
+        type: outlet
