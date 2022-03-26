@@ -1,2 +1,6 @@
 # View all events in a logbook
 logbook:
+  exclude:
+    entity_globs:
+      - binary_sensor.*_update_available
+      - switch.*_power_outage_memory

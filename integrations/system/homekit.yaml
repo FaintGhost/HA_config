@@ -19,6 +19,11 @@ homekit:
         - light.ceiling_light
         - light.night_light
         - switch.pc_switch
+        - switch.0x00158d00012db5eb
     entity_config:
       switch.pc_switch:
+        type: outlet
+      switch.0x00158d00012db5eb:
+        type: outlet
+      switch.0x00158d000154b2cb:
         type: outlet

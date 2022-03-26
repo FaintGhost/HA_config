@@ -27,10 +27,9 @@ sensor.adguard_safe_searches_enforced:
 sensor.adguard_average_processing_speed:
   friendly_name: AdGuard 平均处理时间
 sensor.loaded_power:
-  icon: mdi:power-socket-de
+  friendly_name: 总功率
 sensor.consumed_energy:
   friendly_name: 总耗电量
-  icon: mdi:flash
 sensor.0x00158d0002564da3_action:
   friendly_name: 魔方控制器
 sensor.wireless_click:
