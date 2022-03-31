@@ -1,0 +1,2 @@
+recorder:
+  db_url: mysql://homeassistant:homeassistant@core-mariadb/homeassistant?charset=utf8mb4
